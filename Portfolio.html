@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communicative English - E-Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --accent-color: #38bdf8;
+            --text-color: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
+            --highlight-bg: rgba(56, 189, 248, 0.05);
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: radial-gradient(circle at top, #1e293b, #0b0f19);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 2.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            margin: 0.75rem 0 0 0;
+            font-size: 1.1rem;
+        }
+
+        .meta-info {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--accent-color);
+            background: var(--highlight-bg);
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        main {
+            max-width: 850px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .portfolio-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .item-header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.25rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .item-title {
+            color: #ffffff;
+            margin: 0 0 0.75rem 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .item-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .item-meta span strong {
+            color: var(--accent-color);
+        }
+
+        .media-container {
+            margin: 1.75rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background-color: #000;
+        }
+
+        .media-container img,
+        .media-container iframe {
+            width: 100%;
+            display: block;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            opacity: 0.9;
+            border: none;
+        }
+
+        .section-title {
+            color: var(--accent-color);
+            font-size: 1.05rem;
+            margin: 1.75rem 0 0.6rem 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .section-content {
+            background-color: var(--highlight-bg);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 1.25rem;
+        }
+
+        .section-content p {
+            margin: 0 0 0.75rem 0;
+        }
+
+        .section-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .vocabulary-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .vocabulary-list li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .vocabulary-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .vocabulary-list li::before {
+            content: "→";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 6rem;
+            background-color: #090d16;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Continuous Assessment 1: E-Portfolio</h1>
+        <p>Communicative English - Faculty of Technological Studies</p>
+        <div class="meta-info">
+            <strong>Submission Deadline:</strong> June 20th 2026, 10:00 AM
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 01                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 01: How AI Could Save (Not Destroy) Education</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> TED Talks (YouTube Channel)</span>
+                    <span><strong>Publicized Date:</strong> May 1, 2023</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=hJP5GqnTrNo" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <iframe src="https://www.youtube.com/embed/hJP5GqnTrNo" title="How AI Could Save (Not Destroy) Education | Sal Khan | TED" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> TED (Technology, Entertainment, Design) Talks curation team.</p>
+                <p><strong>Presenter/Speaker:</strong> Sal Khan (Founder and CEO of Khan Academy).</p>
+                <p><strong>Core Concept:</strong> Sal Khan discusses the transformative potential of artificial intelligence in education. Instead of viewing AI tools (like ChatGPT) as threats that foster cheating and intellectual laziness, Khan proposes that AI can be the catalyst for the greatest positive transformation in educational history. He presents the <em>"Two Sigma Problem"</em>—a concept from educational psychologist Benjamin Bloom's 1984 study showing that students who receive one-on-one tutoring perform two standard deviations better than those in traditional classrooms. Khan argues that AI can solve this problem by making high-quality, personalized tutoring scalable and affordable for everyone. He introduces <strong>Khanmigo</strong>, a Socratic AI tutor that guides students step-by-step through problems by asking leading questions rather than giving direct answers, while also acting as an assistant to empower teachers and reduce their administrative burdens.</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>Sal Khan’s perspective offers a refreshing and highly optimistic outlook on AI, which contrasts sharply with the prevailing panic in academic circles. His comparison to Benjamin Bloom’s 2 Sigma study is particularly persuasive, as it highlights how traditional school systems have structurally failed to cater to individual student needs due to resource limitations. Khanmigo's Socratic design is a significant improvement over standard LLMs because it encourages active cognitive engagement rather than passive retrieval. However, I believe Khan underplays the severity of the <em>digital divide</em>. While AI tutoring is theoretically cheap to scale, it still requires stable high-speed internet and modern hardware—resources that are severely lacking in marginalized and developing regions. Additionally, we must remain critical of LLM "hallucinations" (generating incorrect facts with high confidence). For younger students without developed critical thinking skills, these inaccuracies could lead to deep-seated misconceptions. Therefore, while AI holds immense promise, its deployment must be accompanied by careful human oversight, robust validation, and active digital equity initiatives.</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> This talk fundamentally changed how I view AI tools in my own academic journey. I realized that my goal should not be to use AI to bypass thinking or quickly generate essays (which limits my intellectual growth), but to treat AI as a Socratic dialogue partner. I can use it to test my understanding, explain complex technological concepts in simpler terms, and guide my problem-solving process. This active engagement is where true reflective growth happens.</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>Socratic dialogue (noun):</strong> A cooperative argumentative dialogue that stimulates critical thinking and draws out underlying ideas by asking guided questions rather than providing direct answers. <br><em>Contextual Usage:</em> By using Socratic dialogue, the AI tutor ensures that students actively think through the steps of a calculus problem instead of merely copying the solution.</li>
+                    <li><strong>Pedagogical efficacy (noun):</strong> The effectiveness of teaching methods and educational strategies in helping students achieve desired learning outcomes. <br><em>Contextual Usage:</em> Educators are closely studying the pedagogical efficacy of AI-powered tutoring platforms to see if they yield the same benefits as human instructors.</li>
+                    <li><strong>Two Sigma Problem (noun phrase):</strong> An educational phenomenon identified by Benjamin Bloom where tutored students perform two standard deviations (2 sigma) better than classroom-taught peers. <br><em>Contextual Usage:</em> Sal Khan argues that personalized AI agents are the most viable technological solution to solve Bloom's Two Sigma Problem at a global scale.</li>
+                    <li><strong>Stewardship (noun):</strong> The responsible planning and management of resources, particularly in guiding the ethical integration of new technologies into society. <br><em>Contextual Usage:</em> The successful integration of AI in universities requires careful stewardship from educators to ensure academic integrity and equal accessibility.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 02                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 02: [Title of the Interview Video]</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> [Date]</span>
+                    <span><strong>Source Page:</strong> [e.g., TED]</span>
+                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
+                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> [Name]</p>
+                <p><strong>Guest(s):</strong> [Name]</p>
+                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 03                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 03: [Title of the Interview Video]</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> [Date]</span>
+                    <span><strong>Source Page:</strong> [e.g., BBC]</span>
+                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
+                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> [Name]</p>
+                <p><strong>Guest(s):</strong> [Name]</p>
+                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 04                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 04: [Title of the Interview Video]</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> [Date]</span>
+                    <span><strong>Source Page:</strong> [Page Name]</span>
+                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
+                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> [Name]</p>
+                <p><strong>Guest(s):</strong> [Name]</p>
+                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 05                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 05: [Title of the Interview Video]</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> [Date]</span>
+                    <span><strong>Source Page:</strong> [Page Name]</span>
+                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
+                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> [Name]</p>
+                <p><strong>Guest(s):</strong> [Name]</p>
+                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 06                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 06: [Title of the Interview Video]</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> [Date]</span>
+                    <span><strong>Source Page:</strong> [Page Name]</span>
+                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
+                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> [Name]</p>
+                <p><strong>Guest(s):</strong> [Name]</p>
+                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 07                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 07: [Title of the Interview Video]</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> [Date]</span>
+                    <span><strong>Source Page:</strong> [Page Name]</span>
+                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
+                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> [Name]</p>
+                <p><strong>Guest(s):</strong> [Name]</p>
+                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 08                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 08: [Title of the Interview Video]</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> [Date]</span>
+                    <span><strong>Source Page:</strong> [Page Name]</span>
+                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
+                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> [Name]</p>
+                <p><strong>Guest(s):</strong> [Name]</p>
+                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 09                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 09: [Title of the Interview Video]</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> [Date]</span>
+                    <span><strong>Source Page:</strong> [Page Name]</span>
+                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
+                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> [Name]</p>
+                <p><strong>Guest(s):</strong> [Name]</p>
+                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ========================================== -->
+        <!-- INTERVIEW CARD 10                          -->
+        <!-- ========================================== -->
+        <article class="portfolio-item">
+            <div class="item-header">
+                <h2 class="item-title">Interview 10: [Title of the Interview Video]</h2>
+                <div class="item-meta">
+                    <span><strong>Accessed Date:</strong> [Date]</span>
+                    <span><strong>Source Page:</strong> [Page Name]</span>
+                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
+                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                </div>
+            </div>
+            <div class="media-container">
+                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+            </div>
+            <div class="section-title">Summary</div>
+            <div class="section-content">
+                <p><strong>Host:</strong> [Name]</p>
+                <p><strong>Guest(s):</strong> [Name]</p>
+                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+            </div>
+            <div class="section-title">My Opinion</div>
+            <div class="section-content">
+                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+            </div>
+            <div class="section-title">Reflective Growth & Language Learning</div>
+            <div class="section-content">
+                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>New Vocabulary & Language Expressions:</strong></p>
+                <ul class="vocabulary-list">
+                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                </ul>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Continuous Assessment 1 | Communicative English | Submitted via VLE</p>
+    </footer>
+
+</body>
+</html>
