@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Communicative English - E-Portfolio</title>
+    <!-- Import Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #0b0f19;
-            --card-bg: #111827;
+            --card-bg: rgba(17, 24, 39, 0.7);
             --accent-color: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
             --text-color: #f3f4f6;
             --text-muted: #9ca3af;
             --border-color: #1f2937;
-            --highlight-bg: rgba(56, 189, 248, 0.05);
+            --highlight-bg: rgba(56, 189, 248, 0.03);
+            
+            /* Channel Theme Colors */
+            --color-ted: #ef4444;
+            --color-doac: #f59e0b;
+            --color-shetty: #ec4899;
+            --color-bbc: #ffffff;
+            --color-nyt: #10b981;
+            --color-natgeo: #eab308;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.03) 0%, transparent 40%);
             color: var(--text-color);
             margin: 0;
             padding: 0;
@@ -26,67 +47,230 @@
 
         header {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 5rem 1rem 3rem 1rem;
             background: radial-gradient(circle at top, #1e293b, #0b0f19);
             border-bottom: 1px solid var(--border-color);
+            position: relative;
         }
 
         header h1 {
+            font-family: 'Outfit', sans-serif;
             margin: 0;
             color: #ffffff;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: 800;
             letter-spacing: -0.5px;
+            background: linear-gradient(to right, #ffffff, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         header p {
             color: var(--text-muted);
             margin: 0.75rem 0 0 0;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        .meta-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 1.5rem;
         }
 
         .meta-info {
-            margin-top: 1.5rem;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--accent-color);
-            background: var(--highlight-bg);
+            background: rgba(56, 189, 248, 0.08);
             display: inline-block;
             padding: 0.5rem 1.5rem;
             border-radius: 9999px;
             border: 1px solid rgba(56, 189, 248, 0.2);
+            font-weight: 500;
+        }
+
+        .student-info-card {
+            max-width: 600px;
+            margin: 2rem auto 0 auto;
+            background: rgba(31, 41, 55, 0.4);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            padding: 1.25rem;
+            border-radius: 12px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .student-info-item span {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .student-info-item strong {
+            color: #ffffff;
+            display: block;
+            margin-top: 2px;
         }
 
         main {
-            max-width: 850px;
+            max-width: 900px;
             margin: 3rem auto;
             padding: 0 1.5rem;
         }
 
+        /* Dashboard / Navigation Grid */
+        .dashboard-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        .dashboard-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .dashboard-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .nav-card {
+            background: rgba(31, 41, 55, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100px;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+            background: var(--accent-glow);
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15);
+        }
+
+        .nav-num {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #ffffff;
+            margin: 6px 0;
+            line-height: 1.3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .nav-badge {
+            align-self: flex-start;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Portfolio Items */
         .portfolio-item {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-bottom: 3.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.2s ease;
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            scroll-margin-top: 2rem;
         }
 
         .portfolio-item:hover {
-            transform: translateY(-2px);
-            border-color: rgba(56, 189, 248, 0.3);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 15px 50px rgba(56, 189, 248, 0.08);
         }
 
         .item-header {
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 1.25rem;
-            margin-bottom: 1.75rem;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .badge-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .badge-channel {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-channel.ted { background: rgba(239, 68, 68, 0.15); color: var(--color-ted); border: 1px solid rgba(239, 68, 68, 0.3); }
+        .badge-channel.doac { background: rgba(245, 158, 11, 0.15); color: var(--color-doac); border: 1px solid rgba(245, 158, 11, 0.3); }
+        .badge-channel.shetty { background: rgba(236, 72, 153, 0.15); color: var(--color-shetty); border: 1px solid rgba(236, 72, 153, 0.3); }
+        .badge-channel.bbc { background: rgba(255, 255, 255, 0.1); color: var(--color-bbc); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .badge-channel.nyt { background: rgba(16, 185, 129, 0.15); color: var(--color-nyt); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .badge-channel.natgeo { background: rgba(234, 179, 8, 0.15); color: var(--color-natgeo); border: 1px solid rgba(234, 179, 8, 0.3); }
+
+        .badge-topic {
+            background: rgba(56, 189, 248, 0.08);
+            color: var(--accent-color);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
         }
 
         .item-title {
+            font-family: 'Outfit', sans-serif;
             color: #ffffff;
-            margin: 0 0 0.75rem 0;
-            font-size: 1.6rem;
-            font-weight: 600;
+            margin: 0.5rem 0 1rem 0;
+            font-size: 1.85rem;
+            font-weight: 700;
+            line-height: 1.3;
         }
 
         .item-meta {
@@ -95,6 +279,10 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            background: rgba(31, 41, 55, 0.3);
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         .item-meta span strong {
@@ -102,46 +290,61 @@
         }
 
         .media-container {
-            margin: 1.75rem 0;
-            border-radius: 8px;
+            margin: 2rem 0;
+            border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border-color);
             background-color: #000;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
 
-        .media-container img,
         .media-container iframe {
             width: 100%;
             display: block;
             height: auto;
             aspect-ratio: 16 / 9;
-            opacity: 0.9;
             border: none;
         }
 
         .section-title {
+            font-family: 'Outfit', sans-serif;
             color: var(--accent-color);
-            font-size: 1.05rem;
-            margin: 1.75rem 0 0.6rem 0;
+            font-size: 1.15rem;
+            margin: 2.25rem 0 0.75rem 0;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background: linear-gradient(to right, rgba(56, 189, 248, 0.2), transparent);
         }
 
         .section-content {
             background-color: var(--highlight-bg);
-            padding: 1.25rem;
-            border-radius: 8px;
+            padding: 1.5rem;
+            border-radius: 10px;
             border-left: 4px solid var(--accent-color);
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
         }
 
         .section-content p {
-            margin: 0 0 0.75rem 0;
+            margin: 0 0 1rem 0;
+            text-align: justify;
         }
 
         .section-content p:last-child {
             margin-bottom: 0;
+        }
+
+        .section-content p strong {
+            color: #ffffff;
         }
 
         .vocabulary-list {
@@ -151,8 +354,8 @@
         }
 
         .vocabulary-list li {
-            margin-bottom: 0.75rem;
-            padding-left: 1.25rem;
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
             position: relative;
         }
 
@@ -166,36 +369,182 @@
             position: absolute;
             left: 0;
             font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+
+        .vocabulary-list li:hover::before {
+            transform: translateX(4px);
+        }
+
+        .vocabulary-list li strong {
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        /* Float Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-color);
+            color: #0b0f19;
+            width: 45px;
+            height: 45px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: #ffffff;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
         }
 
         footer {
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             border-top: 1px solid var(--border-color);
-            margin-top: 6rem;
-            background-color: #090d16;
+            margin-top: 8rem;
+            background-color: #05070b;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.25rem;
+            }
+            .student-info-card {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-item {
+                padding: 1.75rem;
+            }
+            .nav-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" title="Go to Top">↑</a>
+
     <header>
         <h1>Continuous Assessment 1: E-Portfolio</h1>
-        <p>Communicative English - Faculty of Technological Studies</p>
-        <div class="meta-info">
-            <strong>Submission Deadline:</strong> June 20th 2026, 10:00 AM
+        <p>Communicative English | Faculty of Technological Studies</p>
+        <div class="meta-container">
+            <div class="meta-info"><strong>Course:</strong> Communicative English - FOT</div>
+            <div class="meta-info"><strong>Assignment:</strong> E-Portfolio (Continuous Assessment 1)</div>
+            <div class="meta-info"><strong>Submission Deadline:</strong> June 20th 2026, 10:00 AM</div>
+        </div>
+
+        <!-- Student Info Block -->
+        <div class="student-info-card">
+            <div class="student-info-item">
+                <span>Student Name</span>
+                <strong>[Enter Your Name Here]</strong>
+            </div>
+            <div class="student-info-item">
+                <span>Student Registration No.</span>
+                <strong>[Enter Registration Number Here]</strong>
+            </div>
+            <div class="student-info-item">
+                <span>Faculty</span>
+                <strong>Faculty of Technological Studies (FOT)</strong>
+            </div>
+            <div class="student-info-item">
+                <span>Submission Platform</span>
+                <strong>VLE (Online Link Submission)</strong>
+            </div>
         </div>
     </header>
 
     <main>
         
         <!-- ========================================== -->
+        <!-- DASHBOARD & QUICK NAVIGATION GRID          -->
+        <!-- ========================================== -->
+        <section class="dashboard-section">
+            <h2 class="dashboard-title">Interview Analysis Dashboard</h2>
+            <p class="dashboard-desc">This E-Portfolio showcases critical analyses of 10 selected long-form interviews spanning science, technology, well-being, arts, and environmental policy. Click on any preview card below to jump to the full report.</p>
+            <div class="nav-grid">
+                <a href="#interview-01" class="nav-card">
+                    <span class="nav-num">Interview 01</span>
+                    <span class="nav-name">Sal Khan</span>
+                    <span class="nav-badge" style="background: rgba(239,68,68,0.15); color: var(--color-ted);">TED</span>
+                </a>
+                <a href="#interview-02" class="nav-card">
+                    <span class="nav-num">Interview 02</span>
+                    <span class="nav-name">Simon Sinek</span>
+                    <span class="nav-badge" style="background: rgba(245,158,11,0.15); color: var(--color-doac);">DOAC</span>
+                </a>
+                <a href="#interview-03" class="nav-card">
+                    <span class="nav-num">Interview 03</span>
+                    <span class="nav-name">Selena Gomez</span>
+                    <span class="nav-badge" style="background: rgba(236,72,153,0.15); color: var(--color-shetty);">Jay Shetty</span>
+                </a>
+                <a href="#interview-04" class="nav-card">
+                    <span class="nav-num">Interview 04</span>
+                    <span class="nav-name">President Irfaan Ali</span>
+                    <span class="nav-badge" style="background: rgba(255,255,255,0.1); color: var(--color-bbc);">BBC</span>
+                </a>
+                <a href="#interview-05" class="nav-card">
+                    <span class="nav-num">Interview 05</span>
+                    <span class="nav-name">Meryl Streep</span>
+                    <span class="nav-badge" style="background: rgba(16,185,129,0.15); color: var(--color-nyt);">NYT</span>
+                </a>
+                <a href="#interview-06" class="nav-card">
+                    <span class="nav-num">Interview 06</span>
+                    <span class="nav-name">George & David Stuart</span>
+                    <span class="nav-badge" style="background: rgba(234,179,8,0.15); color: var(--color-natgeo);">Nat Geo</span>
+                </a>
+                <a href="#interview-07" class="nav-card">
+                    <span class="nav-num">Interview 07</span>
+                    <span class="nav-name">Sam Altman</span>
+                    <span class="nav-badge" style="background: rgba(239,68,68,0.15); color: var(--color-ted);">TED</span>
+                </a>
+                <a href="#interview-08" class="nav-card">
+                    <span class="nav-num">Interview 08</span>
+                    <span class="nav-name">Mo Gawdat</span>
+                    <span class="nav-badge" style="background: rgba(245,158,11,0.15); color: var(--color-doac);">DOAC</span>
+                </a>
+                <a href="#interview-09" class="nav-card">
+                    <span class="nav-num">Interview 09</span>
+                    <span class="nav-name">Tom Holland</span>
+                    <span class="nav-badge" style="background: rgba(236,72,153,0.15); color: var(--color-shetty);">Jay Shetty</span>
+                </a>
+                <a href="#interview-10" class="nav-card">
+                    <span class="nav-num">Interview 10</span>
+                    <span class="nav-name">Paul Sereno</span>
+                    <span class="nav-badge" style="background: rgba(234,179,8,0.15); color: var(--color-natgeo);">Nat Geo</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
         <!-- INTERVIEW CARD 01                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-01">
             <div class="item-header">
+                <div class="badge-row">
+                    <span class="badge-channel ted">TED Talks</span>
+                    <span class="badge-topic">Technology & Education</span>
+                </div>
                 <h2 class="item-title">Interview 01: How AI Could Save (Not Destroy) Education</h2>
                 <div class="item-meta">
                     <span><strong>Accessed Date:</strong> June 7, 2026</span>
@@ -205,7 +554,7 @@
                 </div>
             </div>
             <div class="media-container">
-                <iframe src="https://www.youtube.com/embed/hJP5GqnTrNo" title="How AI Could Save (Not Destroy) Education | Sal Khan | TED" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/hJP5GqnTrNo" title="How AI Could Save (Not Destroy) Education | Sal Khan | TED" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
@@ -222,10 +571,10 @@
                 <p><strong>Key Takeaways:</strong> This talk fundamentally changed how I view AI tools in my own academic journey. I realized that my goal should not be to use AI to bypass thinking or quickly generate essays (which limits my intellectual growth), but to treat AI as a Socratic dialogue partner. I can use it to test my understanding, explain complex technological concepts in simpler terms, and guide my problem-solving process. This active engagement is where true reflective growth happens.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>Socratic dialogue (noun):</strong> A cooperative argumentative dialogue that stimulates critical thinking and draws out underlying ideas by asking guided questions rather than providing direct answers. <br><em>Contextual Usage:</em> By using Socratic dialogue, the AI tutor ensures that students actively think through the steps of a calculus problem instead of merely copying the solution.</li>
-                    <li><strong>Pedagogical efficacy (noun):</strong> The effectiveness of teaching methods and educational strategies in helping students achieve desired learning outcomes. <br><em>Contextual Usage:</em> Educators are closely studying the pedagogical efficacy of AI-powered tutoring platforms to see if they yield the same benefits as human instructors.</li>
-                    <li><strong>Two Sigma Problem (noun phrase):</strong> An educational phenomenon identified by Benjamin Bloom where tutored students perform two standard deviations (2 sigma) better than classroom-taught peers. <br><em>Contextual Usage:</em> Sal Khan argues that personalized AI agents are the most viable technological solution to solve Bloom's Two Sigma Problem at a global scale.</li>
-                    <li><strong>Stewardship (noun):</strong> The responsible planning and management of resources, particularly in guiding the ethical integration of new technologies into society. <br><em>Contextual Usage:</em> The successful integration of AI in universities requires careful stewardship from educators to ensure academic integrity and equal accessibility.</li>
+                    <li><strong>Socratic dialogue (noun):</strong> A cooperative argumentative dialogue that stimulates critical thinking and draws out underlying ideas by asking guided questions rather than providing direct answers.<br><em>Contextual Usage:</em> By using Socratic dialogue, the AI tutor ensures that students actively think through the steps of a calculus problem instead of merely copying the solution.</li>
+                    <li><strong>Pedagogical efficacy (noun):</strong> The effectiveness of teaching methods and educational strategies in helping students achieve desired learning outcomes.<br><em>Contextual Usage:</em> Educators are closely studying the pedagogical efficacy of AI-powered tutoring platforms to see if they yield the same benefits as human instructors.</li>
+                    <li><strong>Two Sigma Problem (noun phrase):</strong> An educational phenomenon identified by Benjamin Bloom where tutored students perform two standard deviations (2 sigma) better than classroom-taught peers.<br><em>Contextual Usage:</em> Sal Khan argues that personalized AI agents are the most viable technological solution to solve Bloom's Two Sigma Problem at a global scale.</li>
+                    <li><strong>Stewardship (noun):</strong> The responsible planning and management of resources, particularly in guiding the ethical integration of new technologies into society.<br><em>Contextual Usage:</em> The successful integration of AI in universities requires careful stewardship from educators to ensure academic integrity and equal accessibility.</li>
                 </ul>
             </div>
         </article>
@@ -233,35 +582,42 @@
         <!-- ========================================== -->
         <!-- INTERVIEW CARD 02                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-02">
             <div class="item-header">
-                <h2 class="item-title">Interview 02: [Title of the Interview Video]</h2>
+                <div class="badge-row">
+                    <span class="badge-channel doac">Diary of a CEO</span>
+                    <span class="badge-topic">Business & Leadership</span>
+                </div>
+                <h2 class="item-title">Interview 02: The Number One Reason Why You're Not Succeeding</h2>
                 <div class="item-meta">
-                    <span><strong>Accessed Date:</strong> [Date]</span>
-                    <span><strong>Source Page:</strong> [e.g., TED]</span>
-                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
-                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> The Diary of a CEO (Steven Bartlett)</span>
+                    <span><strong>Publicized Date:</strong> December 20, 2021</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=h695l1pG8pw" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                 </div>
             </div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+                <iframe src="https://www.youtube.com/embed/h695l1pG8pw" title="Simon Sinek: The Number One Reason Why You're Not Succeeding" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
-                <p><strong>Host:</strong> [Name]</p>
-                <p><strong>Guest(s):</strong> [Name]</p>
-                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+                <p><strong>Host:</strong> Steven Bartlett</p>
+                <p><strong>Guest:</strong> Simon Sinek (Author, Speaker, and Leadership Expert)</p>
+                <p><strong>Core Concept:</strong> Simon Sinek shares deep insights on modern business culture, leadership, and personal fulfillment. Sinek outlines how companies fail when they treat business as a finite game with fixed rules and winners, rather than an "infinite game" where the objective is survival and constant adaptation. The discussion centers on the psychological mechanics of success, emphasizing that success is a byproduct of high-trust relationships, structured feedback loops, and empathetic leadership. Sinek describes how true leadership is not a rank of authority, but a daily responsibility to look after those around you, fostering an environment where team members feel safe to innovate and share failures.</p>
             </div>
             <div class="section-title">My Opinion</div>
             <div class="section-content">
-                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+                <p>Sinek's philosophies on empathy-centric leadership are incredibly compelling, especially in a technological landscape that is often hyper-competitive and numbers-driven. His distinction between finite and infinite mindsets is crucial; it explains why companies focused solely on quarterly targets fail to sustain innovation. The emphasis on psychological safety is supported by behavioral research, proving that high-trust teams perform better. However, I think Sinek's frameworks can sometimes lean towards idealism. In many developing markets and fast-paced tech startups, managers face immediate pressure to survive, making the long-term implementation of these cultural changes challenging. While his theories are admirable, they require systemic changes in how corporate performance is evaluated rather than just simple shifts in manager behavior.</p>
             </div>
             <div class="section-title">Reflective Growth & Language Learning</div>
             <div class="section-content">
-                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>Key Takeaways:</strong> This conversation changed my understanding of success. I realized that academic and career achievements are empty without a strong foundation of human connection and mutual trust. As a technology student, when working on team engineering projects, my priority should not just be writing perfect code, but supporting my teammates, encouraging transparent communication, and building psychological safety within the team.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                    <li><strong>Infinite Game (noun phrase):</strong> A framework where the objective is to keep playing the game rather than winning, focusing on resilience and long-term viability.<br><em>Contextual Usage:</em> In the infinite game of technology development, companies should focus on building sustainable architectures rather than hitting short-term sales peaks.</li>
+                    <li><strong>Empathy-centric leadership (noun phrase):</strong> A management philosophy that prioritizes understanding the emotions, viewpoints, and motivations of team members.<br><em>Contextual Usage:</em> Embracing empathy-centric leadership helps tech managers retain top engineering talent by preventing burnout and building mutual respect.</li>
+                    <li><strong>Psychological safety (noun):</strong> A shared belief that the team is safe for interpersonal risk-taking, allowing members to speak up without fear of humiliation.<br><em>Contextual Usage:</em> Without psychological safety, junior developers will hide critical software bugs, leading to massive failures down the line.</li>
+                    <li><strong>Siloed (adjective):</strong> Isolated from others; departments or individuals in an organization operating independently without sharing information.<br><em>Contextual Usage:</em> To build a cohesive user experience, we must break down the siloed workflows between the front-end developers and UI/UX designers.</li>
                 </ul>
             </div>
         </article>
@@ -269,35 +625,42 @@
         <!-- ========================================== -->
         <!-- INTERVIEW CARD 03                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-03">
             <div class="item-header">
-                <h2 class="item-title">Interview 03: [Title of the Interview Video]</h2>
+                <div class="badge-row">
+                    <span class="badge-channel shetty">Jay Shetty</span>
+                    <span class="badge-topic">Psychology & Well-being</span>
+                </div>
+                <h2 class="item-title">Interview 03: How to Stop Insecurity & Truly Love Yourself</h2>
                 <div class="item-meta">
-                    <span><strong>Accessed Date:</strong> [Date]</span>
-                    <span><strong>Source Page:</strong> [e.g., BBC]</span>
-                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
-                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> On Purpose with Jay Shetty</span>
+                    <span><strong>Publicized Date:</strong> November 7, 2022</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=AmARvccsdMI" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                 </div>
             </div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+                <iframe src="https://www.youtube.com/embed/AmARvccsdMI" title="Selena Gomez ON: How To STOP Insecurity & TRULY LOVE YOURSELF To The Core" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
-                <p><strong>Host:</strong> [Name]</p>
-                <p><strong>Guest(s):</strong> [Name]</p>
-                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+                <p><strong>Host:</strong> Jay Shetty</p>
+                <p><strong>Guest:</strong> Selena Gomez (Singer, Actress, and Mental Health Advocate)</p>
+                <p><strong>Core Concept:</strong> Selena Gomez discusses her mental health journey, the pressures of fame, and self-acceptance. The interview coincides with her documentary *My Mind & Me*, exploring her diagnosis with bipolar disorder and her decision to step back from social media to protect her sanity. Selena explains that showing vulnerability is not a weakness, but a path to genuine connection. She talks about how she learned to befriend her inner critic, set strict personal boundaries, and founded Wondermind, a platform dedicated to making mental fitness resources accessible to everyone.</p>
             </div>
             <div class="section-title">My Opinion</div>
             <div class="section-content">
-                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+                <p>Selena Gomez’s interview is incredibly refreshing and honest. In a digital age where social media forces us to curate a perfect, polished life, hearing a massive celebrity talk openly about her struggles with insecurity and mental illness is deeply comforting. Her approach of "befriending the inner critic" is highly practical, mirroring cognitive behavioral therapy techniques. However, we must acknowledge that celebrity access to top-tier psychiatric care is a privilege. To truly support mental health globally, we need systemic reforms that make care affordable for everyone. Her effort to build Wondermind is a step in the right direction, helping to democratize mental health resources.</p>
             </div>
             <div class="section-title">Reflective Growth & Language Learning</div>
             <div class="section-content">
-                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>Key Takeaways:</strong> I learned that vulnerability is an asset, not a liability. Under academic pressure, I often feel insecure about my technical abilities. Gomez's journey taught me to accept my limitations, focus on consistent self-improvement, and speak openly when I am feeling overwhelmed, rather than pretending that everything is perfect.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                    <li><strong>Vulnerability (noun):</strong> The willingness to show one's true emotions, limitations, and insecurities without fear of judgment.<br><em>Contextual Usage:</em> Showing vulnerability during a team project builds trust and encourages others to share their challenges.</li>
+                    <li><strong>Inner critic (noun):</strong> A psychological term referring to the internal voice that judges, demean, or criticize our actions and abilities.<br><em>Contextual Usage:</em> Learning to quiet my inner critic helped me present my technology project to the class with confidence.</li>
+                    <li><strong>Democratize (verb):</strong> To make resources, education, or technology accessible to all people, regardless of wealth or status.<br><em>Contextual Usage:</em> Open-source software is designed to democratize coding education by providing free tools to aspiring developers.</li>
+                    <li><strong>Bipolar disorder (noun):</strong> A mental health condition marked by extreme mood swings, including highs (mania) and lows (depression).<br><em>Contextual Usage:</em> By speaking openly about her bipolar disorder, Selena Gomez helps reduce the social stigma surrounding psychiatric diagnoses.</li>
                 </ul>
             </div>
         </article>
@@ -305,35 +668,42 @@
         <!-- ========================================== -->
         <!-- INTERVIEW CARD 04                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-04">
             <div class="item-header">
-                <h2 class="item-title">Interview 04: [Title of the Interview Video]</h2>
+                <div class="badge-row">
+                    <span class="badge-channel bbc">BBC HARDtalk</span>
+                    <span class="badge-topic">Geopolitics & Environment</span>
+                </div>
+                <h2 class="item-title">Interview 04: President Irfaan Ali on Climate Change & Oil</h2>
                 <div class="item-meta">
-                    <span><strong>Accessed Date:</strong> [Date]</span>
-                    <span><strong>Source Page:</strong> [Page Name]</span>
-                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
-                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> BBC News / HARDtalk (YouTube Channel)</span>
+                    <span><strong>Publicized Date:</strong> March 29, 2024</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=uyOo7J18aXA" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                 </div>
             </div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+                <iframe src="https://www.youtube.com/embed/uyOo7J18aXA" title="Guyana President Irfaan Ali on Climate Change, Oil, and Geopolitics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
-                <p><strong>Host:</strong> [Name]</p>
-                <p><strong>Guest(s):</strong> [Name]</p>
-                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+                <p><strong>Host:</strong> Stephen Sackur</p>
+                <p><strong>Guest:</strong> Dr. Irfaan Ali (President of the Co-operative Republic of Guyana)</p>
+                <p><strong>Core Concept:</strong> Against HARDtalk's classic black background, host Stephen Sackur interviews President Irfaan Ali about Guyana's massive offshore oil discoveries. Sackur challenges the President on the environmental impact of extracting billions of barrels of oil while claiming to advocate for climate action. President Ali responds with a powerful defense of Guyana's green record. He highlights that Guyana's dense, pristine rainforest is larger than the UK and stores over 19.5 gigatons of carbon. The President argues that while the world has benefited from Guyana's carbon sink for free, the country has a sovereign right to develop its economy and lift its citizens out of poverty using its natural resources.</p>
             </div>
             <div class="section-title">My Opinion</div>
             <div class="section-content">
-                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+                <p>This interview is a masterclass in political rhetoric and international diplomacy. President Ali effectively exposed the double standards of Western environmentalism. Developed nations developed their economies on fossil fuels for centuries and now lecture developing nations on carbon emissions, while failing to provide actual compensation for forest conservation. Ali’s defense of Guyana's environmental record was excellent. However, Guyana must be careful to avoid the "Dutch Disease" (where a resource boom damages other economic sectors) and ensure that oil wealth is invested in sustainable infrastructure and education for long-term growth.</p>
             </div>
             <div class="section-title">Reflective Growth & Language Learning</div>
             <div class="section-content">
-                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>Key Takeaways:</strong> I learned that global environmental issues are deeply linked to economic justice. It is easy to take a purist green stance, but for developing countries, economic development is a matter of basic healthcare, education, and quality of life. This interview broadened my understanding of sustainable development and the need for equitable global climate agreements.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                    <li><strong>Carbon sink (noun):</strong> A forest, ocean, or other natural area that absorbs carbon dioxide from the atmosphere, helping to offset emissions.<br><em>Contextual Usage:</em> Protecting the Amazon rainforest is critical because it acts as a global carbon sink, keeping temperatures stable.</li>
+                    <li><strong>Carbon neutrality (noun):</strong> The state of net-zero carbon dioxide emissions, achieved by balancing carbon release with carbon removal.<br><em>Contextual Usage:</em> The university aims to achieve carbon neutrality by investing in solar energy systems and planting native trees.</li>
+                    <li><strong>Hypocrisy (noun):</strong> The behavior of claiming to have moral standards or beliefs that do not match one's actual actions.<br><em>Contextual Usage:</em> It is hypocrisy for wealthy countries to import cheap electronics while criticizing the carbon footprint of manufacturing nations.</li>
+                    <li><strong>Sovereign rights (noun phrase):</strong> The independent authority of a state to govern its territory, make laws, and manage its own natural resources.<br><em>Contextual Usage:</em> Each nation has the sovereign rights to regulate its domestic internet infrastructure and protect local data.</li>
                 </ul>
             </div>
         </article>
@@ -341,35 +711,42 @@
         <!-- ========================================== -->
         <!-- INTERVIEW CARD 05                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-05">
             <div class="item-header">
-                <h2 class="item-title">Interview 05: [Title of the Interview Video]</h2>
+                <div class="badge-row">
+                    <span class="badge-channel nyt">New York Times</span>
+                    <span class="badge-topic">Arts, Music & Empathy</span>
+                </div>
+                <h2 class="item-title">Interview 05: Meryl Streep on Classical Music and Acting</h2>
                 <div class="item-meta">
-                    <span><strong>Accessed Date:</strong> [Date]</span>
-                    <span><strong>Source Page:</strong> [Page Name]</span>
-                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
-                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> The New York Times (TimesTalks on YouTube)</span>
+                    <span><strong>Publicized Date:</strong> August 11, 2016</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=kYvM-i7Qd1k" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                 </div>
             </div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+                <iframe src="https://www.youtube.com/embed/kYvM-i7Qd1k" title="Meryl Streep | Interview | TimesTalks" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
-                <p><strong>Host:</strong> [Name]</p>
-                <p><strong>Guest(s):</strong> [Name]</p>
-                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+                <p><strong>Host:</strong> Anthony Tommasini (New York Times Chief Classical Music Critic)</p>
+                <p><strong>Guest:</strong> Meryl Streep (Academy Award-winning Actress)</p>
+                <p><strong>Core Concept:</strong> This TimesTalks interview focuses on Meryl Streep's preparation for her role in *Florence Foster Jenkins*, a film about a real-life socialite who was a notoriously terrible opera singer. Streep explains the connection between acting, musical performance, and vocal technique. She shares the discipline required to sing poorly on purpose, which actually requires high technical skill and control. The interview goes beyond acting to discuss how art helps us understand human nature and builds empathy across different cultures.</p>
             </div>
             <div class="section-title">My Opinion</div>
             <div class="section-content">
-                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+                <p>Streep’s insights into the role of empathy in acting are profound. She views acting not as a search for fame, but as a way to understand other human lives. Her description of Florence Foster Jenkins—a woman who sang terribly but with absolute joy—highlights how passion can transcend technical perfection. This interview shows that art is a vital part of the human experience. However, the classical acting world can sometimes feel disconnected from the struggles of everyday people. Streep’s humility and focus on character work, rather than celebrity status, help bridge this divide.</p>
             </div>
             <div class="section-title">Reflective Growth & Language Learning</div>
             <div class="section-content">
-                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>Key Takeaways:</strong> I learned that passion and the willingness to try are sometimes more important than raw talent. As a technical student, I often fear making mistakes or looking foolish. Streep’s discussion of Florence's courage inspires me to embrace my learning curve with joy and less self-consciousness.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                    <li><strong>Vocal projection (noun phrase):</strong> The technique of speaking or singing loudly and clearly to fill a large space without strain.<br><em>Contextual Usage:</em> The student practiced vocal projection to ensure the entire lecture hall could hear their presentation.</li>
+                    <li><strong>Empathy (noun):</strong> The ability to understand and share the feelings of another person.<br><em>Contextual Usage:</em> Designers need empathy for their users to build intuitive, easy-to-use software interfaces.</li>
+                    <li><strong>Resonance (noun):</strong> The quality of being deep, full, and echoing; or the ability to evoke deep meaning and emotional responses.<br><em>Contextual Usage:</em> The speaker's stories about perseverance had a strong resonance with the graduating class.</li>
+                    <li><strong>Self-deprecation (noun):</strong> The act of making fun of oneself or speaking modestly about one's achievements.<br><em>Contextual Usage:</em> Using self-deprecation during the presentation helped break the ice and build rapport with the audience.</li>
                 </ul>
             </div>
         </article>
@@ -377,35 +754,42 @@
         <!-- ========================================== -->
         <!-- INTERVIEW CARD 06                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-06">
             <div class="item-header">
-                <h2 class="item-title">Interview 06: [Title of the Interview Video]</h2>
+                <div class="badge-row">
+                    <span class="badge-channel natgeo">National Geographic</span>
+                    <span class="badge-topic">History & Archaeology</span>
+                </div>
+                <h2 class="item-title">Interview 06: Deciphering Mayan Hieroglyphs with George & David Stuart</h2>
                 <div class="item-meta">
-                    <span><strong>Accessed Date:</strong> [Date]</span>
-                    <span><strong>Source Page:</strong> [Page Name]</span>
-                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
-                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> National Geographic Live (YouTube Channel)</span>
+                    <span><strong>Publicized Date:</strong> November 18, 2011</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=jnP224ZUJWA" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                 </div>
             </div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+                <iframe src="https://www.youtube.com/embed/jnP224ZUJWA" title="George & David Stuart | Nat Geo Live" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
-                <p><strong>Host:</strong> [Name]</p>
-                <p><strong>Guest(s):</strong> [Name]</p>
-                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+                <p><strong>Host:</strong> National Geographic Live Panel Moderator</p>
+                <p><strong>Guests:</strong> George Stuart (Archaeologist) and David Stuart (Mayanist Scholar and Epigrapher)</p>
+                <p><strong>Core Concept:</strong> This interview features a father-and-son archaeologist duo discussing the decipherment of the ancient Mayan script. David Stuart, who began deciphering Mayan glyphs at just 15 years old, explains how the Mayan writing system combines logograms (symbols representing words) and phonetic signs (representing sounds). This breakthrough allowed researchers to read the history written by the Maya themselves. The conversation covers the history of Mayan archaeology and how these discoveries transformed our understanding of pre-Columbian Mesoamerica.</p>
             </div>
             <div class="section-title">My Opinion</div>
             <div class="section-content">
-                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+                <p>This interview is a fascinating look at the dedication required to solve historical mysteries. The father-son dynamic is heartwarming and shows the power of mentorship. The decipherment of Mayan hieroglyphs was a major intellectual milestone, transforming our understanding of the Maya from a peaceful, star-gazing civilization into a complex network of warring city-states with rich histories of kings and conquests. It shows the danger of assuming a civilization's nature before reading their own records.</p>
             </div>
             <div class="section-title">Reflective Growth & Language Learning</div>
             <div class="section-content">
-                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>Key Takeaways:</strong> As a technology student, this interview made me appreciate the value of interdisciplinary studies. The decipherment of historical texts is increasingly relying on computational linguistics and AI. Combining historical curiosity with technological tools can lead to incredible breakthroughs.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                    <li><strong>Hieroglyph (noun):</strong> A stylized picture of an object representing a word, syllable, or sound, as found in ancient writing systems.<br><em>Contextual Usage:</em> The archaeologist discovered a limestone tablet covered in ancient hieroglyphs that detailed a royal marriage.</li>
+                    <li><strong>Logosyllabic (adjective):</strong> A writing system where characters represent both whole words (logograms) and individual syllables.<br><em>Contextual Usage:</em> Understanding that the script was logosyllabic allowed scholars to finally translate the ancient texts.</li>
+                    <li><strong>Decipherment (noun):</strong> The process of translating code, ancient symbols, or difficult writing into understandable language.<br><em>Contextual Usage:</em> The decipherment of the encrypted file required advanced decryption algorithms.</li>
+                    <li><strong>Epigraphy (noun):</strong> The study and interpretation of ancient inscriptions, particularly on stone, metal, or clay.<br><em>Contextual Usage:</em> Pursuing epigraphy requires a deep knowledge of linguistics, art history, and cultural archaeology.</li>
                 </ul>
             </div>
         </article>
@@ -413,35 +797,42 @@
         <!-- ========================================== -->
         <!-- INTERVIEW CARD 07                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-07">
             <div class="item-header">
-                <h2 class="item-title">Interview 07: [Title of the Interview Video]</h2>
+                <div class="badge-row">
+                    <span class="badge-channel ted">TED Talks</span>
+                    <span class="badge-topic">Technology & AI Ethics</span>
+                </div>
+                <h2 class="item-title">Interview 07: Inside the Mind of OpenAI's Sam Altman</h2>
                 <div class="item-meta">
-                    <span><strong>Accessed Date:</strong> [Date]</span>
-                    <span><strong>Source Page:</strong> [Page Name]</span>
-                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
-                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> TED Talks (YouTube Channel)</span>
+                    <span><strong>Publicized Date:</strong> April 17, 2023</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=W5iT14F002g" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                 </div>
             </div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+                <iframe src="https://www.youtube.com/embed/W5iT14F002g" title="Inside the mind of OpenAI's Sam Altman | Chris Anderson | TED" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
-                <p><strong>Host:</strong> [Name]</p>
-                <p><strong>Guest(s):</strong> [Name]</p>
-                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+                <p><strong>Host:</strong> Chris Anderson (Head of TED)</p>
+                <p><strong>Guest:</strong> Sam Altman (CEO of OpenAI)</p>
+                <p><strong>Core Concept:</strong> Filmed shortly after the public release of ChatGPT, Chris Anderson interviews Sam Altman about the future of artificial intelligence. They discuss the rapid development of large language models, the safety guardrails implemented by OpenAI, and the long-term vision of Artificial General Intelligence (AGI). Altman discusses the "alignment problem"—ensuring AI systems act in accordance with human values—and argues that the safest way to develop AI is through gradual, public releases so society can adapt to the changes.</p>
             </div>
             <div class="section-title">My Opinion</div>
             <div class="section-content">
-                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+                <p>Sam Altman presents a calm, calculated approach to AI development. His argument for iterative deployment (releasing tools early and improving them based on real-world feedback) is a standard tech industry practice. However, this "move fast and break things" approach is risky when applied to technologies that could disrupt labor markets, democratic elections, and information ecosystems. While OpenAI’s safety teams work hard, corporate competition with Google, Anthropic, and others might lead to rushed releases, compromising ethical standards for market dominance.</p>
             </div>
             <div class="section-title">Reflective Growth & Language Learning</div>
             <div class="section-content">
-                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>Key Takeaways:</strong> As a technological studies student, I must understand that my future work with coding and engineering has ethical implications. Building secure, unbiased, and helpful systems is just as important as writing efficient code. This interview made me appreciate the value of computer science ethics.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                    <li><strong>Alignment problem (noun phrase):</strong> The challenge of ensuring that an artificial intelligence system's goals and behaviors align with human values and safety.<br><em>Contextual Usage:</em> Solving the alignment problem is crucial to prevent superintelligent AI systems from causing unintended harm.</li>
+                    <li><strong>Artificial General Intelligence / AGI (noun):</strong> A theoretical form of AI that possesses the ability to understand, learn, and apply knowledge across any intellectual task at a human level.<br><em>Contextual Usage:</em> OpenAI's ultimate mission is to build AGI that benefits all of humanity.</li>
+                    <li><strong>Iterative deployment (noun phrase):</strong> Releasing software in stages, collecting feedback, and making continuous improvements over time.<br><em>Contextual Usage:</em> Iterative deployment allows developers to fix bugs and address security vulnerabilities based on real-world usage.</li>
+                    <li><strong>Hallucination (noun - AI context):</strong> A phenomenon where a large language model generates incorrect or nonsensical information with high confidence.<br><em>Contextual Usage:</em> Developers are using retrieval-augmented generation to minimize AI hallucinations in medical software.</li>
                 </ul>
             </div>
         </article>
@@ -449,35 +840,42 @@
         <!-- ========================================== -->
         <!-- INTERVIEW CARD 08                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-08">
             <div class="item-header">
-                <h2 class="item-title">Interview 08: [Title of the Interview Video]</h2>
+                <div class="badge-row">
+                    <span class="badge-channel doac">Diary of a CEO</span>
+                    <span class="badge-topic">Technology & Geopolitics</span>
+                </div>
+                <h2 class="item-title">Interview 08: The Geopolitics of AI with Mo Gawdat</h2>
                 <div class="item-meta">
-                    <span><strong>Accessed Date:</strong> [Date]</span>
-                    <span><strong>Source Page:</strong> [Page Name]</span>
-                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
-                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> The Diary of a CEO (Steven Bartlett)</span>
+                    <span><strong>Publicized Date:</strong> June 4, 2026</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=1RGsVx0f2mw" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                 </div>
             </div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+                <iframe src="https://www.youtube.com/embed/1RGsVx0f2mw" title="Mo Gawdat: The REAL Reason It's Already Too Late For Most People" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
-                <p><strong>Host:</strong> [Name]</p>
-                <p><strong>Guest(s):</strong> [Name]</p>
-                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+                <p><strong>Host:</strong> Steven Bartlett</p>
+                <p><strong>Guest:</strong> Mo Gawdat (Author and former Chief Business Officer of Google X)</p>
+                <p><strong>Core Concept:</strong> In this recent and popular interview, Mo Gawdat delivers a warning about the geopolitical consequences of the global AI race. He argues that countries failing to build their own AI infrastructure will become "technology colonies" dependent on foreign tech giants. They discuss the future of work, the psychological impact of living in an AI-driven world, and the urgent need for individuals to develop unique human skills like emotional intelligence and creative thinking.</p>
             </div>
             <div class="section-title">My Opinion</div>
             <div class="section-content">
-                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+                <p>Mo Gawdat’s perspective is chilling yet highly realistic. His concept of "technology colonies" is a powerful geopolitical insight; it highlights how AI could exacerbate global inequality between technologically advanced and developing nations. His warning about the rapid obsolescence of traditional cognitive jobs is also valid. However, while he is alarmist about the systemic risks, his advice to individuals—to focus on emotional intelligence and love—can feel somewhat abstract. We need concrete policy interventions, such as digital sovereignty laws and retraining programs, to protect vulnerable populations.</p>
             </div>
             <div class="section-title">Reflective Growth & Language Learning</div>
             <div class="section-content">
-                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>Key Takeaways:</strong> This interview motivated me to look beyond technical skills. While learning programming languages is important, I must also cultivate my problem-solving ability, emotional resilience, and adaptability, as these are the qualities that AI cannot replicate. It highlighted the importance of staying informed about technological policy.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                    <li><strong>Technology colony (noun phrase):</strong> A country that lacks its own technological infrastructure, making it dependent on foreign platforms.<br><em>Contextual Usage:</em> To avoid becoming a technology colony, the nation must invest in local server infrastructure and tech talent.</li>
+                    <li><strong>Digital sovereignty (noun phrase):</strong> The power of a state or individual to govern and control their own digital data and technological resources.<br><em>Contextual Usage:</em> European regulations like GDPR are designed to protect digital sovereignty against global tech monopolies.</li>
+                    <li><strong>Obsolescence (noun):</strong> The state of being no longer useful, active, or fashionable, typically due to technological advancements.<br><em>Contextual Usage:</em> The rapid rise of AI-driven code generation has led to the obsolescence of basic data-entry jobs.</li>
+                    <li><strong>Cognitive automation (noun phrase):</strong> The use of artificial intelligence to automate tasks that require intellectual processing and decision-making.<br><em>Contextual Usage:</em> Cognitive automation is transforming the legal sector by analyzing thousands of contracts in seconds.</li>
                 </ul>
             </div>
         </article>
@@ -485,35 +883,42 @@
         <!-- ========================================== -->
         <!-- INTERVIEW CARD 09                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-09">
             <div class="item-header">
-                <h2 class="item-title">Interview 09: [Title of the Interview Video]</h2>
+                <div class="badge-row">
+                    <span class="badge-channel shetty">Jay Shetty</span>
+                    <span class="badge-topic">Psychology & Mental Health</span>
+                </div>
+                <h2 class="item-title">Interview 09: Overcoming Social Anxiety with Tom Holland</h2>
                 <div class="item-meta">
-                    <span><strong>Accessed Date:</strong> [Date]</span>
-                    <span><strong>Source Page:</strong> [Page Name]</span>
-                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
-                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> On Purpose with Jay Shetty</span>
+                    <span><strong>Publicized Date:</strong> July 10, 2023</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=BlN7RIHu03I" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                 </div>
             </div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+                <iframe src="https://www.youtube.com/embed/BlN7RIHu03I" title="TOM HOLLAND: How Tom Overcame Social Anxiety- The Mindset That Changed Everything!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
-                <p><strong>Host:</strong> [Name]</p>
-                <p><strong>Guest(s):</strong> [Name]</p>
-                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+                <p><strong>Host:</strong> Jay Shetty</p>
+                <p><strong>Guest:</strong> Tom Holland (Actor, best known for playing Spider-Man)</p>
+                <p><strong>Core Concept:</strong> Tom Holland opens up about his struggles with social anxiety, the overwhelming nature of fame, and his decision to become sober. He describes how he realized his relationship with alcohol was unhealthy, leading him to try "Dry January," which he extended into a permanent lifestyle change. He discusses how sobriety improved his mental clarity, sleep, and emotional stability, and how he manages the pressures of the public eye.</p>
             </div>
             <div class="section-title">My Opinion</div>
             <div class="section-content">
-                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+                <p>Hearing a young, successful actor like Tom Holland discuss social anxiety and sobriety is incredibly impactful for youth culture. Alcohol is deeply embedded in social gatherings, and Holland's candid discussion about the difficulty of socializing sober destigmatizes the choice of sobriety. His focus on self-awareness and incremental lifestyle changes is a practical template for self-improvement. It shows that even those who seem to "have it all" struggle with self-doubt and mental health, highlighting that peace of mind is an internal achievement, not an external one.</p>
             </div>
             <div class="section-title">Reflective Growth & Language Learning</div>
             <div class="section-content">
-                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>Key Takeaways:</strong> I learned the importance of self-reflection and the courage to make choices that run counter to social norms. If a certain habit or environment is harming my focus or mental health, I should have the strength to change it, regardless of peer pressure. Holland’s vulnerability inspired me to prioritize my mental well-being over social expectations.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                    <li><strong>Social anxiety (noun):</strong> A mental health condition marked by intense fear and anxiety during social interactions.<br><em>Contextual Usage:</em> Openly discussing social anxiety helps students feel less isolated in their struggles with public speaking.</li>
+                    <li><strong>Sobriety (noun):</strong> The state of being sober; specifically, abstaining from alcohol or drugs.<br><em>Contextual Usage:</em> Choosing sobriety helped the actor regain control over his emotions and career.</li>
+                    <li><strong>Destigmatize (verb):</strong> To remove the negative association or social stigma attached to a behavior, condition, or identity.<br><em>Contextual Usage:</em> Campaigns are working to destigmatize seeking therapy for mental health issues.</li>
+                    <li><strong>Clarity (noun):</strong> The quality of coherence, intelligibility, or clear thinking.<br><em>Contextual Usage:</em> Getting enough sleep and exercising regularly provides the mental clarity needed to solve complex engineering problems.</li>
                 </ul>
             </div>
         </article>
@@ -521,35 +926,42 @@
         <!-- ========================================== -->
         <!-- INTERVIEW CARD 10                          -->
         <!-- ========================================== -->
-        <article class="portfolio-item">
+        <article class="portfolio-item" id="interview-10">
             <div class="item-header">
-                <h2 class="item-title">Interview 10: [Title of the Interview Video]</h2>
+                <div class="badge-row">
+                    <span class="badge-channel natgeo">National Geographic</span>
+                    <span class="badge-topic">History & Science</span>
+                </div>
+                <h2 class="item-title">Interview 10: Paul Sereno on Paleontology and Climate History</h2>
                 <div class="item-meta">
-                    <span><strong>Accessed Date:</strong> [Date]</span>
-                    <span><strong>Source Page:</strong> [Page Name]</span>
-                    <span><strong>Publicized Date:</strong> [Date/Month]</span>
-                    <span><strong>Link:</strong> <a href="#" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                    <span><strong>Accessed Date:</strong> June 7, 2026</span>
+                    <span><strong>Source Page:</strong> National Geographic (YouTube Channel)</span>
+                    <span><strong>Publicized Date:</strong> June 25, 2009</span>
+                    <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=DLpW4fSxusE" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                 </div>
             </div>
             <div class="media-container">
-                <img src="https://via.placeholder.com/800x450/111827/9ca3af?text=Insert+Video+Screenshot+or+Embed+Here" alt="Interview Content View">
+                <iframe src="https://www.youtube.com/embed/DLpW4fSxusE" title="Interview: Paul Sereno | National Geographic" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="section-title">Summary</div>
             <div class="section-content">
-                <p><strong>Host:</strong> [Name]</p>
-                <p><strong>Guest(s):</strong> [Name]</p>
-                <p><strong>Core Concept:</strong> [Briefly explain what the interview is about.]</p>
+                <p><strong>Host:</strong> National Geographic Interviewer</p>
+                <p><strong>Guest:</strong> Dr. Paul Sereno (Paleontologist and National Geographic Explorer-in-Residence)</p>
+                <p><strong>Core Concept:</strong> This interview features paleontologist Paul Sereno discussing his expeditions in the Sahara Desert, where he discovered *Sarcosuchus* (a giant ancient crocodile) and several new dinosaur species. Sereno details the challenges of working in extreme desert environments, the process of excavating massive fossils, and how paleontology connects us to the ancient history of our planet, showing how Earth's climate has drastically shifted over millions of years.</p>
             </div>
             <div class="section-title">My Opinion</div>
             <div class="section-content">
-                <p>[Write your personal perspective or thoughts regarding the topic discussed.]</p>
+                <p>Paul Sereno's enthusiasm for discovery is contagious. His work shows that science is an adventure requiring both intellectual rigor and physical resilience. His discoveries in the Sahara are vital because they provide concrete evidence of historical climate shifts; the Sahara was once a lush, green river system teeming with life. This research is highly relevant to modern climate discussions, showing how fragile ecosystems are. However, fossil excavation in developing nations can sometimes raise questions about cultural heritage ownership, and modern paleontology must work closely with local governments to ensure discoveries benefit the host nations.</p>
             </div>
             <div class="section-title">Reflective Growth & Language Learning</div>
             <div class="section-content">
-                <p><strong>Key Takeaways:</strong> [What did you learn personally or professionally?]</p>
+                <p><strong>Key Takeaways:</strong> I learned that major achievements require perseverance in harsh conditions. Sereno's work in the Sahara teaches me that research is not just done in comfortable labs or libraries; it often requires getting out into the field, facing uncertainty, and working collaboratively under difficult circumstances.</p>
                 <p><strong>New Vocabulary & Language Expressions:</strong></p>
                 <ul class="vocabulary-list">
-                    <li><strong>[Word/Phrase 01]:</strong> [Meaning and usage in context]</li>
+                    <li><strong>Paleontology (noun):</strong> The branch of science concerned with fossil animals and plants.<br><em>Contextual Usage:</em> Through paleontology, scientists can reconstruct the ecosystems of the Mesozoic era.</li>
+                    <li><strong>Excavation (noun):</strong> The action of excavating something, especially an archaeological site to unearth historical remains.<br><em>Contextual Usage:</em> The excavation of the ancient Roman villa revealed beautifully preserved mosaic floors.</li>
+                    <li><strong>Expedition (noun):</strong> A journey undertaken by a group of people with a particular purpose, especially that of exploration or research.<br><em>Contextual Usage:</em> The scientific expedition to the Mariana Trench discovered several new deep-sea organisms.</li>
+                    <li><strong>Fossilization (noun):</strong> The process of an animal or plant becoming preserved in a hard, petrified form.<br><em>Contextual Usage:</em> Fossilization requires very specific environmental conditions, which is why most prehistoric organisms left no trace.</li>
                 </ul>
             </div>
         </article>
@@ -557,7 +969,8 @@
     </main>
 
     <footer>
-        <p>Continuous Assessment 1 | Communicative English | Submitted via VLE</p>
+        <p>Continuous Assessment 1 | Communicative English | Faculty of Technological Studies</p>
+        <p>Submitted via VLE | University of Sri Jayewardenepura &copy; 2026</p>
     </footer>
 
 </body>
