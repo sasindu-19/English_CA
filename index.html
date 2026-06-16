@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,12 @@
     <!-- Import Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Sticky Navigation Bar -->
@@ -30,94 +34,154 @@
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top" title="Go to Top">↑</a>
 
-    <header>
-        <h1>Continuous Assessment 1: E-Portfolio</h1>
-        <p>Communicative English | Faculty of Technological Studies</p>
-        <div class="meta-container">
-            <div class="meta-info"><strong>Course:</strong> Communicative English - FOT</div>
-            <div class="meta-info"><strong>Assignment:</strong> E-Portfolio (Continuous Assessment 1)</div>
-            <div class="meta-info"><strong>Submission Deadline:</strong> June 20th 2026, 10:00 AM</div>
-        </div>
-
-        <!-- Student Info Block -->
-        <div class="student-info-card">
-            <div class="student-info-item">
-                <span>Student Name</span>
-                <strong>[Enter Your Name Here]</strong>
+    <header class="hero-header">
+        <div class="header-grid">
+            <div class="header-left">
+                <div class="header-pretitle">Continuous Assessment 1</div>
+                <h1 class="header-title">English <span>E-Portfolio</span></h1>
+                <p class="header-subtitle">Communicative English | Faculty of Technological Studies (FOT)</p>
+                <div class="meta-container">
+                    <div class="meta-info"><strong>Course:</strong> Communicative English - FOT</div>
+                    <div class="meta-info"><strong>Assignment:</strong> CA 1 - E-Portfolio</div>
+                    <div class="meta-info"><strong>Deadline:</strong> June 20th 2026, 10:00 AM</div>
+                </div>
             </div>
-            <div class="student-info-item">
-                <span>Student Registration No.</span>
-                <strong>[Enter Registration Number Here]</strong>
-            </div>
-            <div class="student-info-item">
-                <span>Faculty</span>
-                <strong>Faculty of Technological Studies (FOT)</strong>
-            </div>
-            <div class="student-info-item">
-                <span>Submission Platform</span>
-                <strong>VLE (Online Link Submission)</strong>
+            <div class="header-right">
+                <!-- Redesigned Smart ID Student Card -->
+                <div class="student-id-card">
+                    <div class="card-glow-overlay"></div>
+                    <div class="card-header-accent"></div>
+                    <div class="card-body">
+                        <div class="card-visuals">
+                            <!-- SVG Student Avatar Silhouette -->
+                            <div class="avatar-container">
+                                <svg class="avatar-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="currentColor" opacity="0.35"/>
+                                    <path d="M12 14C8.67 14 2 15.67 2 19V20H22V19C22 15.67 15.33 14 12 14Z" fill="currentColor" opacity="0.35"/>
+                                </svg>
+                            </div>
+                            <!-- SVG Smart Card Gold Chip -->
+                            <div class="gold-chip">
+                                <svg class="chip-svg" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="5" width="90" height="70" rx="10" fill="url(#chipGradient)" stroke="rgba(212,175,55,0.8)" stroke-width="2"/>
+                                    <path d="M50 5V75" stroke="rgba(0,0,0,0.25)" stroke-width="2"/>
+                                    <path d="M5 40H95" stroke="rgba(0,0,0,0.25)" stroke-width="2"/>
+                                    <path d="M30 5V40" stroke="rgba(0,0,0,0.25)" stroke-width="2"/>
+                                    <path d="M70 5V40" stroke="rgba(0,0,0,0.25)" stroke-width="2"/>
+                                    <path d="M30 40V75" stroke="rgba(0,0,0,0.25)" stroke-width="2"/>
+                                    <path d="M70 40V75" stroke="rgba(0,0,0,0.25)" stroke-width="2"/>
+                                    <rect x="35" y="25" width="30" height="30" rx="4" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="2"/>
+                                    <defs>
+                                        <linearGradient id="chipGradient" x1="0" y1="0" x2="100" y2="80" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#ffe875"/>
+                                            <stop offset="0.5" stop-color="#f7c844"/>
+                                            <stop offset="1" stop-color="#b8860b"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <div class="student-info-item">
+                                <span>Student Name</span>
+                                <strong>[Enter Your Name Here]</strong>
+                            </div>
+                            <div class="student-info-item">
+                                <span>Student Registration No.</span>
+                                <strong>[Enter Registration Number Here]</strong>
+                            </div>
+                            <div class="student-info-item">
+                                <span>Faculty</span>
+                                <strong>Faculty of Technological Studies</strong>
+                            </div>
+                            <div class="student-info-item">
+                                <span>Submission Platform</span>
+                                <strong>VLE (Online Link Submission)</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative Barcode at the Bottom -->
+                    <div class="card-barcode">
+                        <svg class="barcode-svg" viewBox="0 0 300 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="30" fill="transparent"/>
+                            <path d="M10 5V25M15 5V25M18 5V25M25 5V25M32 5V25M35 5V25M38 5V25M45 5V25M50 5V25M58 5V25M62 5V25M65 5V25M72 5V25M80 5V25M88 5V25M92 5V25M95 5V25M102 5V25M108 5V25M112 5V25M118 5V25M125 5V25M128 5V25M135 5V25M142 5V25M145 5V25M148 5V25M155 5V25M160 5V25M168 5V25M172 5V25M175 5V25M182 5V25M190 5V25M198 5V25M202 5V25M205 5V25M212 5V25M218 5V25M222 5V25M228 5V25M235 5V25M238 5V25M245 5V25M252 5V25M255 5V25M258 5V25M265 5V25M270 5V25M278 5V25M282 5V25M285 5V25M290 5V25" stroke="currentColor" stroke-width="1.8"/>
+                            <text x="220" y="20" fill="currentColor" opacity="0.4" font-family="'Outfit', sans-serif" font-size="7" font-weight="700" letter-spacing="1">USJP-FOT-2026</text>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        
+
         <!-- ========================================== -->
         <!-- DASHBOARD & QUICK NAVIGATION GRID          -->
         <!-- ========================================== -->
         <section class="dashboard-section">
             <h2 class="dashboard-title">Interview Analysis Dashboard</h2>
-            <p class="dashboard-desc">This E-Portfolio showcases critical analyses of selected long-form interviews. Once you provide the YouTube links, we will populate the quick navigation cards and details here.</p>
+            <p class="dashboard-desc">This E-Portfolio showcases critical analyses of selected long-form interviews.
+                Once you provide the YouTube links, we will populate the quick navigation cards and details here.</p>
             <div class="nav-grid" id="nav-grid">
                 <a href="#interview-01" class="nav-card">
                     <span class="nav-num">Interview 01</span>
                     <span class="nav-name">Ian Bremer</span>
-                    <span class="nav-badge" style="background: rgba(239, 68, 68, 0.15); color: var(--color-ted);">TED</span>
+                    <span class="nav-badge"
+                        style="background: rgba(239, 68, 68, 0.15); color: var(--color-ted);">TED</span>
                 </a>
                 <a href="#interview-02" class="nav-card">
                     <span class="nav-num">Interview 02</span>
                     <span class="nav-name">Tekedra Mawakana</span>
-                    <span class="nav-badge" style="background: rgba(239, 68, 68, 0.15); color: var(--color-ted);">TED</span>
+                    <span class="nav-badge"
+                        style="background: rgba(239, 68, 68, 0.15); color: var(--color-ted);">TED</span>
                 </a>
                 <a href="#interview-03" class="nav-card">
                     <span class="nav-num">Interview 03</span>
                     <span class="nav-name">Pierre Poilievre</span>
-                    <span class="nav-badge" style="background: rgba(245, 158, 11, 0.15); color: var(--color-doac);">DOAC</span>
+                    <span class="nav-badge"
+                        style="background: rgba(245, 158, 11, 0.15); color: var(--color-doac);">DOAC</span>
                 </a>
                 <a href="#interview-04" class="nav-card">
                     <span class="nav-num">Interview 04</span>
                     <span class="nav-name">Dr. Michio Kaku</span>
-                    <span class="nav-badge" style="background: rgba(245, 158, 11, 0.15); color: var(--color-doac);">DOAC</span>
+                    <span class="nav-badge"
+                        style="background: rgba(245, 158, 11, 0.15); color: var(--color-doac);">DOAC</span>
                 </a>
                 <a href="#interview-05" class="nav-card">
                     <span class="nav-num">Interview 05</span>
                     <span class="nav-name">Jessie Inchauspé</span>
-                    <span class="nav-badge" style="background: rgba(245, 158, 11, 0.15); color: var(--color-doac);">DOAC</span>
+                    <span class="nav-badge"
+                        style="background: rgba(245, 158, 11, 0.15); color: var(--color-doac);">DOAC</span>
                 </a>
                 <a href="#interview-06" class="nav-card">
                     <span class="nav-num">Interview 06</span>
                     <span class="nav-name">Miles Chamley-Watson</span>
-                    <span class="nav-badge" style="background: rgba(236, 72, 153, 0.15); color: var(--color-shetty);">Jay Shetty</span>
+                    <span class="nav-badge"
+                        style="background: rgba(236, 72, 153, 0.15); color: var(--color-shetty);">Jay Shetty</span>
                 </a>
                 <a href="#interview-07" class="nav-card">
                     <span class="nav-num">Interview 07</span>
                     <span class="nav-name">Matthew Hussey</span>
-                    <span class="nav-badge" style="background: rgba(236, 72, 153, 0.15); color: var(--color-shetty);">Jay Shetty</span>
+                    <span class="nav-badge"
+                        style="background: rgba(236, 72, 153, 0.15); color: var(--color-shetty);">Jay Shetty</span>
                 </a>
                 <a href="#interview-08" class="nav-card">
                     <span class="nav-num">Interview 08</span>
                     <span class="nav-name">Jan-Emmanuel De Neve</span>
-                    <span class="nav-badge" style="background: rgba(236, 72, 153, 0.15); color: var(--color-shetty);">Jay Shetty</span>
+                    <span class="nav-badge"
+                        style="background: rgba(236, 72, 153, 0.15); color: var(--color-shetty);">Jay Shetty</span>
                 </a>
                 <a href="#interview-09" class="nav-card">
                     <span class="nav-num">Interview 09</span>
                     <span class="nav-name">Azam Ahmed</span>
-                    <span class="nav-badge" style="background: rgba(16, 185, 129, 0.15); color: var(--color-nyt);">NYT</span>
+                    <span class="nav-badge"
+                        style="background: rgba(16, 185, 129, 0.15); color: var(--color-nyt);">NYT</span>
                 </a>
                 <a href="#interview-10" class="nav-card">
                     <span class="nav-num">Interview 10</span>
                     <span class="nav-name">Steven Spielberg</span>
-                    <span class="nav-badge" style="background: rgba(16, 185, 129, 0.15); color: var(--color-nyt);">NYT</span>
+                    <span class="nav-badge"
+                        style="background: rgba(16, 185, 129, 0.15); color: var(--color-nyt);">NYT</span>
                 </a>
             </div>
         </section>
@@ -135,31 +199,45 @@
                     </div>
                     <h2 class="item-title">Interview 01: Why most of the news doesn't get your attention</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 15, 2026</span>
-                        <span><strong>Source Page:</strong> TED YouTube channel</span>
-                        <span><strong>Publicized Date:</strong> May 20, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 01, 2026</span>
+                        <span><strong>Source Page:</strong> TED YouTube Channel</span>
+                        <span><strong>Publicized Date:</strong> May 22, 2026</span>
                         <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=BR7xdT_Xi5U" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/BR7xdT_Xi5U" title="Why most of the news doesn't get your attention | TED Explains the World with Ian Bremmer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/BR7xdT_Xi5U"
+                        title="Why most of the news doesn't get your attention | TED Explains the World with Ian Bremmer"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>This interview is hosted by Helen Walters. She interviews Ian Bremer, a renowned political scientist and founder of the Eurasia Group and GZERO Media. The main concept of this video is how to find reliable news and understand world politics.</p>
-                    <p>Ian talks about how modern news is becoming more biased and politicized. He explains how to get reliable information from world leaders by building long-term relationships and avoiding single points of view. Instead of reading short, emotionally charged social media headlines, he advises the general public to consume longer-form content, such as podcasts or in-depth articles.</p>
+                    <p>This interview is hosted by Helen Walters. She interviews Ian Bremer, a renowned political
+                        scientist and founder of the Eurasia Group and GZERO Media. The main concept of this video is
+                        how to find reliable news and understand world politics.</p>
+                    <p>Ian talks about how modern news is becoming more biased and politicized. He explains how to get
+                        reliable information from world leaders by building long-term relationships and avoiding single
+                        points of view. Instead of reading short, emotionally charged social media headlines, he advises
+                        the general public to consume longer-form content, such as podcasts or in-depth articles.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I think this interview is very useful in today’s digital world. With so much fake and biased news on the internet, Ian’s advice on how to choose our news sources carefully is very important. I completely agree with his idea that we should spend more time understanding deeper issues rather than reacting quickly to short news headlines.</p>
+                    <p>I think this interview is very useful in today’s digital world. With so much fake and biased news
+                        on the internet, Ian’s advice on how to choose our news sources carefully is very important. I
+                        completely agree with his idea that we should spend more time understanding deeper issues rather
+                        than reacting quickly to short news headlines.</p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
                     <ul class="vocabulary-list">
-                        <li><strong>Geopolitical:</strong> Relating to politics and international relations around the world.</li>
+                        <li><strong>Geopolitical:</strong> Relating to politics and international relations around the
+                            world.</li>
                         <li><strong>Simpatico:</strong> Having similar views or getting along well with someone.</li>
-                        <li><strong>Kleptocracy:</strong> A society or government ruled by corrupt leaders who steal national wealth.</li>
-                        <li><strong>Commodification:</strong> Made into a basic, common product that is easily available.</li>
+                        <li><strong>Kleptocracy:</strong> A society or government ruled by corrupt leaders who steal
+                            national wealth.</li>
+                        <li><strong>Commodification:</strong> Made into a basic, common product that is easily
+                            available.</li>
                     </ul>
                 </div>
             </article>
@@ -175,31 +253,50 @@
                     </div>
                     <h2 class="item-title">Interview 02: Waymo’s Case for a Driverless Future</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 16, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 02, 2026</span>
                         <span><strong>Source Page:</strong> TED YouTube Channel</span>
+                        <span><strong>Publicized Date:</strong> May 25, 2026</span>
                         <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=Gqy1E5piq1w" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/Gqy1E5piq1w" title="Waymo’s Case for a Driverless Future | Tekedra Mawakana, Sal Khan | TED" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/Gqy1E5piq1w"
+                        title="Waymo’s Case for a Driverless Future | Tekedra Mawakana, Sal Khan | TED"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>In this video, the host is Sal Khan. He interviews Tekedra Mawakana, who works for Waymo, a company that builds driverless cars. The main concept of this interview is the future of fully autonomous vehicles and how they can make our roads much safer.</p>
-                    <p>Tekedra explains that Waymo vehicles are currently over 10 times safer than human drivers and have zero recorded deaths so far. They also discuss how driverless cars might change our future cities, for example, by turning old parking spaces into community parks. Finally, they talk about how the company plans to help people whose driving jobs might be replaced, by offering them new technology-focused jobs.</p>
+                    <p>In this video, the host is Sal Khan. He interviews Tekedra Mawakana, who works for Waymo, a
+                        company that builds driverless cars. The main concept of this interview is the future of fully
+                        autonomous vehicles and how they can make our roads much safer.</p>
+                    <p>Tekedra explains that Waymo vehicles are currently over 10 times safer than human drivers and
+                        have zero recorded deaths so far. They also discuss how driverless cars might change our future
+                        cities, for example, by turning old parking spaces into community parks. Finally, they talk
+                        about how the company plans to help people whose driving jobs might be replaced, by offering
+                        them new technology-focused jobs.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I find this interview both exciting and a little surprising. It is amazing to hear that a robot driver can be much safer than a distracted, angry, or tired human driver. I strongly agree with Tekedra that society should not accept the current high number of daily car accidents as normal. However, I also think governments and companies need to be very careful and supportive of people who might lose their jobs, like taxi or truck drivers, as this new technology grows.</p>
+                    <p>I find this interview both exciting and a little surprising. It is amazing to hear that a robot
+                        driver can be much safer than a distracted, angry, or tired human driver. I strongly agree with
+                        Tekedra that society should not accept the current high number of daily car accidents as normal.
+                        However, I also think governments and companies need to be very careful and supportive of people
+                        who might lose their jobs, like taxi or truck drivers, as this new technology grows.</p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
                     <ul class="vocabulary-list">
-                        <li><strong>Autonomous:</strong> A vehicle or machine that operates by itself completely without a human driver.</li>
-                        <li><strong>Inflection point:</strong> A very important moment in a process when a big or significant change happens.</li>
-                        <li><strong>Status quo:</strong> The current situation or the way things are normally done right now.</li>
-                        <li><strong>Extrapolate:</strong> To guess what might happen in the future based on the information we have now.</li>
-                        <li><strong>Upskilling:</strong> Teaching workers new skills so they can do a different or more advanced job.</li>
+                        <li><strong>Autonomous:</strong> A vehicle or machine that operates by itself completely without
+                            a human driver.</li>
+                        <li><strong>Inflection point:</strong> A very important moment in a process when a big or
+                            significant change happens.</li>
+                        <li><strong>Status quo:</strong> The current situation or the way things are normally done right
+                            now.</li>
+                        <li><strong>Extrapolate:</strong> To guess what might happen in the future based on the
+                            information we have now.</li>
+                        <li><strong>Upskilling:</strong> Teaching workers new skills so they can do a different or more
+                            advanced job.</li>
                     </ul>
                 </div>
             </article>
@@ -213,24 +310,37 @@
                         <span class="badge-channel doac">Diary of a CEO</span>
                         <span class="badge-topic">Politics & Economics</span>
                     </div>
-                    <h2 class="item-title">Interview 03: Pierre Poilievre: Why America Is Quietly Abandoning Its Allies (& What Comes Next)</h2>
+                    <h2 class="item-title">Interview 03: Pierre Poilievre: Why America Is Quietly Abandoning Its Allies
+                        (& What Comes Next)</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 15, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 04, 2026</span>
                         <span><strong>Source Page:</strong> The Diary Of A CEO YouTube Channel</span>
+                        <span><strong>Publicized Date:</strong> April 2, 2026</span>
                         <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=9JxaESJIGO0" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/9JxaESJIGO0" title="Pierre Poilievre: Why America Is Quietly Abandoning Its Allies (& What Comes Next)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/9JxaESJIGO0"
+                        title="Pierre Poilievre: Why America Is Quietly Abandoning Its Allies (& What Comes Next)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>The host of this interview is Steven Bartlett. He interviews Pierre Poilievre, a famous Canadian politician and the leader of the opposition in Canada. The main concept of this long interview covers world politics, especially the relationship between the USA and Canada.</p>
-                    <p>They also discuss important economic and social issues like the housing crisis, inflation, and how Artificial Intelligence (AI) will change future jobs. Additionally, Pierre shares his emotional personal life story, including being adopted, his parents' divorce, and his experiences raising an autistic daughter.</p>
+                    <p>The host of this interview is Steven Bartlett. He interviews Pierre Poilievre, a famous Canadian
+                        politician and the leader of the opposition in Canada. The main concept of this long interview
+                        covers world politics, especially the relationship between the USA and Canada.</p>
+                    <p>They also discuss important economic and social issues like the housing crisis, inflation, and
+                        how Artificial Intelligence (AI) will change future jobs. Additionally, Pierre shares his
+                        emotional personal life story, including being adopted, his parents' divorce, and his
+                        experiences raising an autistic daughter.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I found this interview very interesting because it is rare to see a politician speak so openly and honestly about his personal life. His belief in "stoicism"—which means focusing only on what we can control in life—is a great lesson for everyone. Also, the discussion about how AI will disrupt the future job market was very eye-opening and informative for me.</p>
+                    <p>I found this interview very interesting because it is rare to see a politician speak so openly
+                        and honestly about his personal life. His belief in "stoicism"—which means focusing only on what
+                        we can control in life—is a great lesson for everyone. Also, the discussion about how AI will
+                        disrupt the future job market was very eye-opening and informative for me.</p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
@@ -239,7 +349,8 @@
                         <li><strong>Altruism:</strong> Caring about the happiness and well-being of other people.</li>
                         <li><strong>Metastasize:</strong> To spread and grow dangerously out of control.</li>
                         <li><strong>Rambunctious:</strong> Being full of energy and difficult to control.</li>
-                        <li><strong>Stoicism:</strong> The practice of focusing only on things you can control and staying calm during hard times.</li>
+                        <li><strong>Stoicism:</strong> The practice of focusing only on things you can control and
+                            staying calm during hard times.</li>
                     </ul>
                 </div>
             </article>
@@ -253,33 +364,52 @@
                         <span class="badge-channel doac">Diary of a CEO</span>
                         <span class="badge-topic">Science & Technology</span>
                     </div>
-                    <h2 class="item-title">Interview 04: World-Renowned Physicist: They Are Lying To You About UFOs & Reality - Michio Kaku</h2>
+                    <h2 class="item-title">Interview 04: World-Renowned Physicist: They Are Lying To You About UFOs &
+                        Reality - Michio Kaku</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 16, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 05, 2026</span>
                         <span><strong>Source Page:</strong> The Diary Of A CEO YouTube Channel</span>
-                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=opB7_JXL0LA" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                        <span><strong>Publicized Date:</strong> May 21, 2026</span>
+                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=opB7_JXL0LA"
+                                target="_blank" style="color: var(--accent-color); text-decoration: none;">View
+                                Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/opB7_JXL0LA" title="World-Renowned Physicist: They Are Lying To You About UFOs & Reality - Michio Kaku" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/opB7_JXL0LA"
+                        title="World-Renowned Physicist: They Are Lying To You About UFOs & Reality - Michio Kaku"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>The host of this interview is Steven Bartlett. He interviews Dr. Michio Kaku, a world-famous theoretical physicist. The main concept of this interview is understanding the universe, physics, and the future of human destiny. They discuss complex topics in simple ways, including String Theory, the Big Bang, dark matter, and powerful quantum computers.</p>
-                    <p>Dr. Kaku also talks about the rapid growth of Artificial Intelligence (AI), the possibility of extraterrestrial life (aliens), and how his past experiences in the military changed his perspective on human morality and warfare.</p>
+                    <p>The host of this interview is Steven Bartlett. He interviews Dr. Michio Kaku, a world-famous
+                        theoretical physicist. The main concept of this interview is understanding the universe,
+                        physics, and the future of human destiny. They discuss complex topics in simple ways, including
+                        String Theory, the Big Bang, dark matter, and powerful quantum computers.</p>
+                    <p>Dr. Kaku also talks about the rapid growth of Artificial Intelligence (AI), the possibility of
+                        extraterrestrial life (aliens), and how his past experiences in the military changed his
+                        perspective on human morality and warfare.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I find this interview incredibly fascinating and mind-blowing. Hearing a top scientist explain complex ideas like the "theory of everything" and quantum computing makes science feel very exciting. I completely agree with his idea that instead of fearing the future of AI and robots, we should focus on learning how to control them properly to solve human problems like diseases.</p>
+                    <p>I find this interview incredibly fascinating and mind-blowing. Hearing a top scientist explain
+                        complex ideas like the "theory of everything" and quantum computing makes science feel very
+                        exciting. I completely agree with his idea that instead of fearing the future of AI and robots,
+                        we should focus on learning how to control them properly to solve human problems like diseases.
+                    </p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
                     <ul class="vocabulary-list">
-                        <li><strong>Tantalizing:</strong> Teasing with something that is desired but kept out of reach.</li>
+                        <li><strong>Tantalizing:</strong> Teasing with something that is desired but kept out of reach.
+                        </li>
                         <li><strong>Extraterrestrial:</strong> Coming from outside the planet Earth.</li>
-                        <li><strong>Agnostic:</strong> A person who believes that nothing is known or can be known about the existence of God.</li>
+                        <li><strong>Agnostic:</strong> A person who believes that nothing is known or can be known about
+                            the existence of God.</li>
                         <li><strong>Plausible:</strong> Seeming reasonable or probable.</li>
-                        <li><strong>Camaraderie:</strong> Mutual trust and friendship among people who spend a lot of time together.</li>
+                        <li><strong>Camaraderie:</strong> Mutual trust and friendship among people who spend a lot of
+                            time together.</li>
                     </ul>
                 </div>
             </article>
@@ -293,31 +423,52 @@
                         <span class="badge-channel doac">Diary of a CEO</span>
                         <span class="badge-topic">Health & Wellness</span>
                     </div>
-                    <h2 class="item-title">Interview 05: They're Lying About 'Healthy' Foods & Sugar! Shocking New Research That's Harming You</h2>
+                    <h2 class="item-title">Interview 05: They're Lying About 'Healthy' Foods & Sugar! Shocking New
+                        Research That's Harming You</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 16, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 07, 2026</span>
                         <span><strong>Source Page:</strong> The Diary Of A CEO YouTube Channel</span>
-                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=Xm_PHZXGe-w" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                        <span><strong>Publicized Date:</strong> February 26, 2026</span>
+                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=Xm_PHZXGe-w"
+                                target="_blank" style="color: var(--accent-color); text-decoration: none;">View
+                                Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/Xm_PHZXGe-w" title="They're Lying About 'Healthy' Foods & Sugar! Shocking New Research That's Harming You" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/Xm_PHZXGe-w"
+                        title="They're Lying About 'Healthy' Foods & Sugar! Shocking New Research That's Harming You"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>In this interview, the host is Steven Bartlett. He interviews Jessie Inchauspé, a biochemist and author who is also known as the "Glucose Goddess". The main concept of this interview is the dangerous impact of sugar and glucose spikes on our bodies, especially how it affects babies during pregnancy.</p>
-                    <p>Jessie explains how a mother's diet can directly program a baby's DNA through a process called "epigenetics". She highlights the importance of specific nutrients like choline from eggs, protein, and omega-3s from fish for a baby's brain development. They also discuss simple, everyday hacks to avoid dangerous sugar spikes, such as eating a savory breakfast, starting meals with vegetables, and doing simple exercises (like calf raises) immediately after eating sweet foods.</p>
+                    <p>In this interview, the host is Steven Bartlett. He interviews Jessie Inchauspé, a biochemist and
+                        author who is also known as the "Glucose Goddess". The main concept of this interview is the
+                        dangerous impact of sugar and glucose spikes on our bodies, especially how it affects babies
+                        during pregnancy.</p>
+                    <p>Jessie explains how a mother's diet can directly program a baby's DNA through a process called
+                        "epigenetics". She highlights the importance of specific nutrients like choline from eggs,
+                        protein, and omega-3s from fish for a baby's brain development. They also discuss simple,
+                        everyday hacks to avoid dangerous sugar spikes, such as eating a savory breakfast, starting
+                        meals with vegetables, and doing simple exercises (like calf raises) immediately after eating
+                        sweet foods.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I think this interview is extremely informative and eye-opening. It is shocking to learn how much our daily food choices and hidden sugars affect our long-term health, mood, and even future generations. I strongly agree with Jessie's advice to use simple, practical hacks—like walking or moving our muscles after a meal—instead of blindly following strict, impossible diets. It shows that small daily changes can make a massive difference in controlling our health.</p>
+                    <p>I think this interview is extremely informative and eye-opening. It is shocking to learn how much
+                        our daily food choices and hidden sugars affect our long-term health, mood, and even future
+                        generations. I strongly agree with Jessie's advice to use simple, practical hacks—like walking
+                        or moving our muscles after a meal—instead of blindly following strict, impossible diets. It
+                        shows that small daily changes can make a massive difference in controlling our health.</p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
                     <ul class="vocabulary-list">
-                        <li><strong>Epigenetics:</strong> How behaviors and environment can cause changes that affect the way our genes work.</li>
+                        <li><strong>Epigenetics:</strong> How behaviors and environment can cause changes that affect
+                            the way our genes work.</li>
                         <li><strong>Satiated:</strong> Feeling completely full and satisfied after eating a meal.</li>
-                        <li><strong>Denature:</strong> To change the natural qualities of something, like removing natural fiber from fruit to make juice.</li>
+                        <li><strong>Denature:</strong> To change the natural qualities of something, like removing
+                            natural fiber from fruit to make juice.</li>
                         <li><strong>Suboptimal:</strong> Being below the best possible standard or quality.</li>
                         <li><strong>Nuance:</strong> A very small or subtle difference in meaning or situation.</li>
                     </ul>
@@ -333,30 +484,44 @@
                         <span class="badge-channel shetty">Jay Shetty</span>
                         <span class="badge-topic">Sports & Mindset</span>
                     </div>
-                    <h2 class="item-title">Interview 06: How the World's TOP Fencer Stays Unshakable Under Pressure (Use This Habit!)</h2>
+                    <h2 class="item-title">Interview 06: How the World's TOP Fencer Stays Unshakable Under Pressure (Use
+                        This Habit!)</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 16, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 09, 2026</span>
                         <span><strong>Source Page:</strong> Jay Shetty Podcast YouTube Channel</span>
+                        <span><strong>Publicized Date:</strong> June 3, 2026</span>
                         <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=HcZhrFL8ylE" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/HcZhrFL8ylE" title="How the World's TOP Fencer Stays Unshakable Under Pressure (Use This Habit!)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/HcZhrFL8ylE"
+                        title="How the World's TOP Fencer Stays Unshakable Under Pressure (Use This Habit!)"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>In this video, the host is Jay Shetty. He interviews Miles Chamley-Watson, an Olympic medalist and a champion in fencing. The main concept of this interview is about sports, mindset, and overcoming life challenges. Miles explains how finding the sport of fencing saved his life when he was a troubled kid. He talks about the importance of learning how to lose before learning how to win. They also discuss how he faced racism in a traditionally white sport and how he handled extreme family pressure, like when his sister had a stroke right before the Olympics.</p>
+                    <p>In this video, the host is Jay Shetty. He interviews Miles Chamley-Watson, an Olympic medalist
+                        and a champion in fencing. The main concept of this interview is about sports, mindset, and
+                        overcoming life challenges. Miles explains how finding the sport of fencing saved his life when
+                        he was a troubled kid. He talks about the importance of learning how to lose before learning how
+                        to win. They also discuss how he faced racism in a traditionally white sport and how he handled
+                        extreme family pressure, like when his sister had a stroke right before the Olympics.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I think this interview is very inspiring. Miles’s story shows that sports can completely change a young person's life for the better. I really like his positive mindset, especially his rule that "it's never lost, it's always a lesson". It teaches us how to face pressure, discrimination, and hard times with a strong mind without losing our true selves.</p>
+                    <p>I think this interview is very inspiring. Miles’s story shows that sports can completely change a
+                        young person's life for the better. I really like his positive mindset, especially his rule that
+                        "it's never lost, it's always a lesson". It teaches us how to face pressure, discrimination, and
+                        hard times with a strong mind without losing our true selves.</p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
                     <ul class="vocabulary-list">
                         <li><strong>Notoriously:</strong> Being famous or well-known for something bad.</li>
                         <li><strong>Homage:</strong> Showing deep respect or public honor to someone.</li>
-                        <li><strong>Compartmentalizing:</strong> Separating your thoughts or feelings into different parts to handle them easily.</li>
+                        <li><strong>Compartmentalizing:</strong> Separating your thoughts or feelings into different
+                            parts to handle them easily.</li>
                         <li><strong>Unassuming:</strong> Quiet and showing no desire to be noticed or praised.</li>
                         <li><strong>Catalyst:</strong> A person or an event that causes a big change.</li>
                     </ul>
@@ -372,33 +537,54 @@
                         <span class="badge-channel shetty">Jay Shetty</span>
                         <span class="badge-topic">Relationships & Mindset</span>
                     </div>
-                    <h2 class="item-title">Interview 07: Love Expert Matthew Hussey: #1 Mistake That is Keeping You Stuck!</h2>
+                    <h2 class="item-title">Interview 07: Love Expert Matthew Hussey: #1 Mistake That is Keeping You
+                        Stuck!</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 16, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 10, 2026</span>
                         <span><strong>Source Page:</strong> Jay Shetty Podcast YouTube Channel</span>
-                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=WBp6OJlI-ac" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                        <span><strong>Publicized Date:</strong> May 27, 2026</span>
+                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=WBp6OJlI-ac"
+                                target="_blank" style="color: var(--accent-color); text-decoration: none;">View
+                                Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/WBp6OJlI-ac" title="Love Expert Matthew Hussey: #1 Mistake That is Keeping You Stuck!" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/WBp6OJlI-ac"
+                        title="Love Expert Matthew Hussey: #1 Mistake That is Keeping You Stuck!"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>In this video, the host is Jay Shetty. He interviews his friend Matthew Hussey, who is a famous love, relationship, and dating expert. The main concept of this interview is about modern dating problems, finding true love, and setting healthy standards.</p>
-                    <p>Matthew explains that people often hate the process of dating because it feels exhausting, but they should simply see it as connecting and relating with other humans. He also explains that what people often call "chemistry" is sometimes just stress and excitement caused by uncertainty. He strongly advises that people should look for long-term compatibility and good character instead of focusing on superficial standards.</p>
+                    <p>In this video, the host is Jay Shetty. He interviews his friend Matthew Hussey, who is a famous
+                        love, relationship, and dating expert. The main concept of this interview is about modern dating
+                        problems, finding true love, and setting healthy standards.</p>
+                    <p>Matthew explains that people often hate the process of dating because it feels exhausting, but
+                        they should simply see it as connecting and relating with other humans. He also explains that
+                        what people often call "chemistry" is sometimes just stress and excitement caused by
+                        uncertainty. He strongly advises that people should look for long-term compatibility and good
+                        character instead of focusing on superficial standards.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I think this conversation is extremely insightful and helpful. I completely agree with Matthew's point that "going slow is faster" when it comes to finding real love, because it saves us from wasting years in the wrong relationships. His explanation that chemistry is sometimes just the stress of not feeling safe is a very eye-opening perspective. It teaches us the importance of communicating our true needs without fear.</p>
+                    <p>I think this conversation is extremely insightful and helpful. I completely agree with Matthew's
+                        point that "going slow is faster" when it comes to finding real love, because it saves us from
+                        wasting years in the wrong relationships. His explanation that chemistry is sometimes just the
+                        stress of not feeling safe is a very eye-opening perspective. It teaches us the importance of
+                        communicating our true needs without fear.</p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
                     <ul class="vocabulary-list">
                         <li><strong>Flirtatious:</strong> Behaving in a playful way that shows romantic interest.</li>
-                        <li><strong>Superficial:</strong> Not deep; focusing only on how things look on the outside.</li>
-                        <li><strong>Unilaterally:</strong> A decision made by only one person without asking the other.</li>
-                        <li><strong>Reparation:</strong> The process of fixing or repairing emotional damage caused by a mistake.</li>
-                        <li><strong>Reciprocal:</strong> A healthy relationship where both people give and receive equally.</li>
+                        <li><strong>Superficial:</strong> Not deep; focusing only on how things look on the outside.
+                        </li>
+                        <li><strong>Unilaterally:</strong> A decision made by only one person without asking the other.
+                        </li>
+                        <li><strong>Reparation:</strong> The process of fixing or repairing emotional damage caused by a
+                            mistake.</li>
+                        <li><strong>Reciprocal:</strong> A healthy relationship where both people give and receive
+                            equally.</li>
                     </ul>
                 </div>
             </article>
@@ -414,31 +600,50 @@
                     </div>
                     <h2 class="item-title">Interview 08: The Simple Secret of Being Happier…</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 16, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 12, 2026</span>
                         <span><strong>Source Page:</strong> Jay Shetty Podcast YouTube Channel</span>
+                        <span><strong>Publicized Date:</strong> April 15, 2026</span>
                         <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=IzTQs8Fa2FE" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/IzTQs8Fa2FE" title="The Simple Secret of Being Happier…" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/IzTQs8Fa2FE" title="The Simple Secret of Being Happier…"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>In this interview, the host is Jay Shetty. He speaks with Jan-Emmanuel De Neve, an economics professor and an expert on workplace well-being. The main concept of this interview is how happiness at work shapes our lives and society.</p>
-                    <p>They discuss the decline of happiness among youth today, which is mostly caused by the high cost of living and anxiety about the future of jobs due to AI tools like ChatGPT. Jan explains that simple social connections, such as sharing meals with others, are very powerful for our mental well-being. At work, having a "best friend" and a feeling of belonging makes employees much more satisfied and productive. Finally, he strongly suggests that implementing a 4-day work week could greatly improve our future society by giving people their precious time back.</p>
+                    <p>In this interview, the host is Jay Shetty. He speaks with Jan-Emmanuel De Neve, an economics
+                        professor and an expert on workplace well-being. The main concept of this interview is how
+                        happiness at work shapes our lives and society.</p>
+                    <p>They discuss the decline of happiness among youth today, which is mostly caused by the high cost
+                        of living and anxiety about the future of jobs due to AI tools like ChatGPT. Jan explains that
+                        simple social connections, such as sharing meals with others, are very powerful for our mental
+                        well-being. At work, having a "best friend" and a feeling of belonging makes employees much more
+                        satisfied and productive. Finally, he strongly suggests that implementing a 4-day work week
+                        could greatly improve our future society by giving people their precious time back.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I find this interview very practical and highly relatable. The idea that having a best friend at work is the biggest predictor of job satisfaction makes perfect sense to me. I also completely agree with the professor's suggestion of a 4-day work week. Since humans are becoming much more productive with technology, we should get more time to rest and build real social connections instead of just working all the time.</p>
+                    <p>I find this interview very practical and highly relatable. The idea that having a best friend at
+                        work is the biggest predictor of job satisfaction makes perfect sense to me. I also completely
+                        agree with the professor's suggestion of a 4-day work week. Since humans are becoming much more
+                        productive with technology, we should get more time to rest and build real social connections
+                        instead of just working all the time.</p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
                     <ul class="vocabulary-list">
-                        <li><strong>Precipitous:</strong> Very sudden and dramatic, often used to describe a quick and dangerous decline.</li>
-                        <li><strong>Vilify:</strong> To speak or write bad things about someone or something, like how people vilify tech companies.</li>
-                        <li><strong>Conjecture:</strong> An opinion or guess that is formed based on incomplete information.</li>
-                        <li><strong>Incumbent:</strong> The person or group currently holding a political office or position.</li>
-                        <li><strong>Asynchronous:</strong> Tasks or communication that do not happen at the exact same time, like writing emails.</li>
+                        <li><strong>Precipitous:</strong> Very sudden and dramatic, often used to describe a quick and
+                            dangerous decline.</li>
+                        <li><strong>Vilify:</strong> To speak or write bad things about someone or something, like how
+                            people vilify tech companies.</li>
+                        <li><strong>Conjecture:</strong> An opinion or guess that is formed based on incomplete
+                            information.</li>
+                        <li><strong>Incumbent:</strong> The person or group currently holding a political office or
+                            position.</li>
+                        <li><strong>Asynchronous:</strong> Tasks or communication that do not happen at the exact same
+                            time, like writing emails.</li>
                     </ul>
                 </div>
             </article>
@@ -454,31 +659,52 @@
                     </div>
                     <h2 class="item-title">Interview 09: How A Drug Cocktail Made of Paper Is Killing Inmates</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 16, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 14, 2026</span>
                         <span><strong>Source Page:</strong> The New York Times YouTube Channel</span>
-                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=t_tPV_CiTTU" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                        <span><strong>Publicized Date:</strong> May 26, 2026</span>
+                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=t_tPV_CiTTU"
+                                target="_blank" style="color: var(--accent-color); text-decoration: none;">View
+                                Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/t_tPV_CiTTU" title="How A Drug Cocktail Made of Paper Is Killing Inmates" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/t_tPV_CiTTU"
+                        title="How A Drug Cocktail Made of Paper Is Killing Inmates"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>The host of this interview speaks with Azam Ahmed, an investigative reporter for The New York Times. The main concept of this interview is the dangerous new synthetic drug crisis around the world.</p>
-                    <p>Azam explains how criminals are now creating deadly synthetic drugs in labs, which are more potent and harder to track than natural drugs. He shares a shocking story about Cook County Jail in Chicago, where inmates were overdosing and dying just by smoking normal pieces of paper. Criminals turn synthetic drugs into liquid, soak everyday paper (like letters from loved ones or books) in it, and easily smuggle them into the jail. The interview highlights that the traditional "War on Drugs" has failed because whenever law enforcement bans one substance, criminals simply invent a new, deadlier one.</p>
+                    <p>The host of this interview speaks with Azam Ahmed, an investigative reporter for The New York
+                        Times. The main concept of this interview is the dangerous new synthetic drug crisis around the
+                        world.</p>
+                    <p>Azam explains how criminals are now creating deadly synthetic drugs in labs, which are more
+                        potent and harder to track than natural drugs. He shares a shocking story about Cook County Jail
+                        in Chicago, where inmates were overdosing and dying just by smoking normal pieces of paper.
+                        Criminals turn synthetic drugs into liquid, soak everyday paper (like letters from loved ones or
+                        books) in it, and easily smuggle them into the jail. The interview highlights that the
+                        traditional "War on Drugs" has failed because whenever law enforcement bans one substance,
+                        criminals simply invent a new, deadlier one.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I think this interview is terrifying but very eye-opening. It is shocking to learn how creatively criminals can smuggle drugs, like hiding them on standard mailing papers or even using Amazon deliveries. I completely agree with the reporter that simply arresting drug lords or banning chemicals is not working anymore. Since criminals are always innovating, society and governments need a completely new, creative approach to handle this modern addiction crisis.</p>
+                    <p>I think this interview is terrifying but very eye-opening. It is shocking to learn how creatively
+                        criminals can smuggle drugs, like hiding them on standard mailing papers or even using Amazon
+                        deliveries. I completely agree with the reporter that simply arresting drug lords or banning
+                        chemicals is not working anymore. Since criminals are always innovating, society and governments
+                        need a completely new, creative approach to handle this modern addiction crisis.</p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
                     <ul class="vocabulary-list">
-                        <li><strong>Synthetic:</strong> Made artificially by chemical processes, not naturally grown in the land.</li>
+                        <li><strong>Synthetic:</strong> Made artificially by chemical processes, not naturally grown in
+                            the land.</li>
                         <li><strong>Lethal:</strong> Very dangerous and capable of causing death.</li>
-                        <li><strong>Harbinger:</strong> A sign that shows something bad is going to happen in the future.</li>
+                        <li><strong>Harbinger:</strong> A sign that shows something bad is going to happen in the
+                            future.</li>
                         <li><strong>Ubiquitous:</strong> Found everywhere and very common (like paper).</li>
-                        <li><strong>Contraband:</strong> Illegal goods that are smuggled into a restricted place like a jail.</li>
+                        <li><strong>Contraband:</strong> Illegal goods that are smuggled into a restricted place like a
+                            jail.</li>
                         <li><strong>Lucrative:</strong> Producing a lot of money or profit.</li>
                     </ul>
                 </div>
@@ -493,33 +719,53 @@
                         <span class="badge-channel nyt">New York Times</span>
                         <span class="badge-topic">Cinema & Society</span>
                     </div>
-                    <h2 class="item-title">Interview 10: Steven Spielberg on the Real Life Evidence That Inspired 'Disclosure Day'</h2>
+                    <h2 class="item-title">Interview 10: Steven Spielberg on the Real Life Evidence That Inspired
+                        'Disclosure Day'</h2>
                     <div class="item-meta">
-                        <span><strong>Accessed Date:</strong> June 16, 2026</span>
+                        <span><strong>Accessed Date:</strong> June 15, 2026</span>
                         <span><strong>Source Page:</strong> The New York Times YouTube Channel</span>
-                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=s4Q0NHp-f_s" target="_blank" style="color: var(--accent-color); text-decoration: none;">View Content</a></span>
+                        <span><strong>Publicized Date:</strong> June 14, 2026</span>
+                        <span><strong>Link:</strong> <a href="https://www.youtube.com/watch?v=s4Q0NHp-f_s"
+                                target="_blank" style="color: var(--accent-color); text-decoration: none;">View
+                                Content</a></span>
                     </div>
                 </div>
                 <div class="media-container">
-                    <iframe src="https://www.youtube.com/embed/s4Q0NHp-f_s" title="Steven Spielberg on the Real Life Evidence That Inspired 'Disclosure Day'" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/s4Q0NHp-f_s"
+                        title="Steven Spielberg on the Real Life Evidence That Inspired 'Disclosure Day'"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
                 </div>
                 <div class="section-title">Summary</div>
                 <div class="section-content">
-                    <p>In this interview, the host is Rachel Aver. She interviews the legendary movie director Steven Spielberg. The main concept of this interview is his new movie "Disclosure Day," which is about the government hiding information about aliens and UFOs.</p>
-                    <p>Spielberg explains that he believes in aliens because of recent real-life evidence and credible news reports. They also discuss his long filmmaking career, how he sometimes uses movies to overcome his childhood fears, and why he thinks watching movies in a theater builds a strong community. At the end, he mentions he is spending his summer learning about Artificial Intelligence (AI) to properly understand its dangers and benefits.</p>
+                    <p>In this interview, the host is Rachel Aver. She interviews the legendary movie director Steven
+                        Spielberg. The main concept of this interview is his new movie "Disclosure Day," which is about
+                        the government hiding information about aliens and UFOs.</p>
+                    <p>Spielberg explains that he believes in aliens because of recent real-life evidence and credible
+                        news reports. They also discuss his long filmmaking career, how he sometimes uses movies to
+                        overcome his childhood fears, and why he thinks watching movies in a theater builds a strong
+                        community. At the end, he mentions he is spending his summer learning about Artificial
+                        Intelligence (AI) to properly understand its dangers and benefits.</p>
                 </div>
                 <div class="section-title">My Opinion</div>
                 <div class="section-content">
-                    <p>I think this interview is very fascinating. It is amazing to hear how a world-famous director like Spielberg still wants to learn new things, like taking classes to understand AI. I also strongly agree with his idea that watching a movie in a theater with strangers creates a special sense of community and connection that we cannot get by watching videos alone.</p>
+                    <p>I think this interview is very fascinating. It is amazing to hear how a world-famous director
+                        like Spielberg still wants to learn new things, like taking classes to understand AI. I also
+                        strongly agree with his idea that watching a movie in a theater with strangers creates a special
+                        sense of community and connection that we cannot get by watching videos alone.</p>
                 </div>
                 <div class="section-title">Reflective Development - What You Learned</div>
                 <div class="section-content">
                     <ul class="vocabulary-list">
                         <li><strong>Percolating:</strong> Spreading slowly or brewing over time.</li>
-                        <li><strong>Malaise:</strong> A general feeling of discomfort, sadness, or lack of interest.</li>
-                        <li><strong>Estrangement:</strong> No longer being friendly or close to someone in your family.</li>
-                        <li><strong>Contagion:</strong> An emotion or feeling that spreads quickly from person to person.</li>
-                        <li><strong>Complacency:</strong> Feeling too satisfied with a situation and not wanting to change it, even if it is dangerous.</li>
+                        <li><strong>Malaise:</strong> A general feeling of discomfort, sadness, or lack of interest.
+                        </li>
+                        <li><strong>Estrangement:</strong> No longer being friendly or close to someone in your family.
+                        </li>
+                        <li><strong>Contagion:</strong> An emotion or feeling that spreads quickly from person to
+                            person.</li>
+                        <li><strong>Complacency:</strong> Feeling too satisfied with a situation and not wanting to
+                            change it, even if it is dangerous.</li>
                     </ul>
                 </div>
             </article>
@@ -533,4 +779,5 @@
     </footer>
 
 </body>
+
 </html>
