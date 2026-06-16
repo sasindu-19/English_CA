@@ -209,7 +209,7 @@ body {
 .header-title {
     font-family: 'Playfair Display', serif;
     margin: 0;
-    font-size: 3.2rem;
+    font-size: clamp(2.2rem, 4.2vw, 3.2rem);
     font-weight: 800;
     line-height: 1.1;
     color: var(--text);
@@ -217,6 +217,7 @@ body {
 }
 
 .header-title span {
+    white-space: nowrap;
     background: linear-gradient(135deg, var(--violet-light) 0%, var(--violet) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -269,6 +270,9 @@ body {
     gap: 1.25rem;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: left;
+    max-width: 460px;
+    width: 100%;
+    margin-left: auto;
 }
 
 .student-id-card:hover {
@@ -790,11 +794,13 @@ footer p { margin: 5px 0; }
 }
 
 /* ── Responsive ───────────────────────────── */
-@media (max-width: 768px) {
-    .hero-header { padding: 3.5rem 1rem 2.5rem; }
-    .header-grid { grid-template-columns: 1fr; gap: 32px; }
-    .header-title { font-size: 2.2rem; }
-    .header-subtitle { font-size: 0.9rem; }
+@media (max-width: 992px) {
+    .hero-header { padding: 4.5rem 1.5rem 3rem; }
+    .header-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+    .header-left { text-align: center; align-items: center; }
+    .header-title { font-size: clamp(2rem, 5vw, 2.8rem); }
+    .header-subtitle { font-size: 0.95rem; }
+    .student-id-card { margin: 0 auto; }
 
     main { margin: 2rem auto; padding: 0 1rem; }
 
